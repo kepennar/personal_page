@@ -1,0 +1,226 @@
+@font-face {
+  font-family: "exoregular";
+  src: url('/fonts/exo/exo-regular-webfont.woff') format('woff'), url('/fonts/exo/exo-regular-webfont.ttf') format('truetype'), url('/fonts/exo/Exo-Regular.otf') format('opentype'), url('/fonts/exo/exo-regular-webfont.svg') format('svg');
+}
+
+@font-face {
+  font-family: "impactlabel";
+  src: url('/fonts/impact/Impact_Label_Reversed-webfont.woff') format('woff'), url('/fonts/impact/Impact_Label_Reversed-webfont.ttf') format('truetype'), url('/fonts/impact/Impact_Label_Reversed-webfont.otf') format('opentype'), url('/fonts/impact/Impact_Label_Reversed-webfont.svg') format('svg');
+}
+
+/* line 38, main.scss */
+body {
+  background: #fefefe;
+  color: #979797;
+  padding: 0;
+  font-family: "exoregular";
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* line 47, main.scss */
+header {
+  padding: 0;
+  border-bottom: 1px solid #e7e7e7;
+  background: white;
+  font-size: 24px;
+  font-family: "impactlabel";
+  -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0 2px 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.08) 0 2px 5px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0 2px 5px;
+}
+
+/* line 55, main.scss */
+header.navbar {
+  margin-bottom: 0;
+}
+
+/* line 58, main.scss */
+header .navbar-user img {
+  height: 50px;
+  width: 50px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 0;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 0;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-background-clip: padding-box;
+}
+
+/* line 65, main.scss */
+header, header a {
+  color: #222222;
+}
+
+/* line 68, main.scss */
+.navbar-toggle .icon-bar {
+  background-color: #222222;
+}
+
+/* line 71, main.scss */
+.navbar-nav > li.me {
+  font-weight: bold;
+}
+
+/* line 75, main.scss */
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: transparent;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 80, main.scss */
+  header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+  }
+}
+/* line 88, main.scss */
+.hero {
+  background-image: url(../img/Birdy-Blue.png);
+  height: 100%;
+}
+
+/* line 92, main.scss */
+.hero h1 {
+  color: #222222;
+}
+
+/* line 95, main.scss */
+.hero h2 {
+  color: #444444;
+}
+
+@media (min-width: 768px) {
+  /* line 99, main.scss */
+  .hero {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 24px;
+    text-align: left;
+  }
+
+  /* line 106, main.scss */
+  .hero h1 {
+    font-size: 60px;
+    line-height: 1;
+  }
+}
+@media (min-width: 992px) {
+  /* line 113, main.scss */
+  .hero h1, .bs-docs-header p {
+    margin-right: 250px;
+  }
+}
+/* line 117, main.scss */
+section {
+  padding: 25px 0 25px 0;
+}
+
+/* line 120, main.scss */
+section aside {
+  display: none;
+  width: 50%;
+  float: left;
+  padding-right: 5%;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+  /* line 129, main.scss */
+  section aside {
+    display: block;
+  }
+}
+/* line 133, main.scss */
+#section1 {
+  background: #f5f3dc;
+  color: #979797;
+}
+
+/* line 137, main.scss */
+#section1 hr {
+  border-color: #979797;
+}
+
+/* line 141, main.scss */
+#section2 {
+  background: #2ca5cc;
+  color: black;
+}
+
+/* line 145, main.scss */
+#section2 hr {
+  border-color: black;
+}
+
+/* line 148, main.scss */
+#section2 a {
+  color: white;
+}
+
+/* line 151, main.scss */
+#section2 a:hover {
+  color: #cccccc;
+}
+
+/* line 155, main.scss */
+#section3 {
+  background: #84e1ff;
+  color: black;
+}
+
+/* line 159, main.scss */
+#section3 hr {
+  border-color: black;
+}
+
+/* line 164, main.scss */
+footer {
+  background: #454445;
+  color: white;
+  /*border-top: 2px solid #e5e5e5;*/
+}
+
+/* line 170, main.scss */
+.browsehappy {
+  font-size: 48px;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* line 179, main.scss */
+.thumbnail {
+  background: transparent;
+  border: none;
+}
+
+/* line 183, main.scss */
+.thumbnail img {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* line 187, main.scss */
+.table-row {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 30px;
+}
+
+/* line 191, main.scss */
+.emphasis {
+  font-weight: bold;
+  text-shadow: 0px -1px 1px #868686;
+}

@@ -1,0 +1,194 @@
+@import "compass/css3";
+@import "compass/utilities";
+
+
+$default-bg-color: #fefefe;
+$default-txt-color: #979797;
+$default-ft-size: 16px;
+
+$header-bg-color: #fff;
+$header-txt-color: #222;
+
+$hero-h1-txt-color: #222;
+$hero-h2-txt-color: #444;
+
+
+$section1-bg-color: #F5F3DC;
+$section1-txt-color: #979797;
+
+$section2-bg-color: #2CA5CC;
+$section2-txt-color: #000;
+$section2-link-color: #fff;
+
+$section3-bg-color: #84E1FF;
+$section3-txt-color: #000;
+
+$footer-bg-color: #454445;
+$footer-txt-color: #FFFFFF;
+
+$default-text-shadow-color: #868686;
+$default-text-shadow-blur: 1px;
+$default-text-shadow-v-offset: -1px;
+
+
+
+@include font-face("exoregular", font-files("exo/exo-regular-webfont.woff", "exo/exo-regular-webfont.ttf", "exo/Exo-Regular.otf", "exo/exo-regular-webfont.svg"));
+@include font-face("impactlabel", font-files("impact/Impact_Label_Reversed-webfont.woff", "impact/Impact_Label_Reversed-webfont.ttf", "impact/Impact_Label_Reversed-webfont.otf", "impact/Impact_Label_Reversed-webfont.svg"));
+
+body {
+    background: $default-bg-color;
+    color: $default-txt-color;
+    padding: 0;
+    font-family: "exoregular";
+    font-size: $default-ft-size;
+    line-height: 26px;    
+}
+
+header {
+    padding: 0;
+    border-bottom: 1px solid #e7e7e7;
+    background: $header-bg-color;
+    font-size: 24px;
+    font-family: "impactlabel";
+    @include box-shadow(rgba(0,0,0,.08) 0 2px 5px);
+}
+header.navbar {
+    margin-bottom: 0;
+}
+header .navbar-user img {
+    height: 50px;
+    width: 50px;
+    @include box-shadow( rgba(0, 0, 0, 0.3) 0 1px 0);
+    @include border-radius(6px);
+    -webkit-background-clip: padding-box;
+}
+header, header a {
+    color: $header-txt-color;
+}
+.navbar-toggle .icon-bar {
+    background-color: $header-txt-color;
+}
+.navbar-nav>li.me {
+    font-weight: bold;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+    background-color: transparent;
+}
+
+@media only screen and (min-width: 768px){
+    header {
+        top: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 9999;
+    }
+}
+
+.hero {
+    background-image: url(../img/Birdy-Blue.png);
+    height: 100%;
+}
+.hero h1 {
+    color: $hero-h1-txt-color;
+}
+.hero h2 {
+    color: $hero-h2-txt-color;
+}
+@media (min-width:768px) {
+    .hero {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        font-size: 24px;
+        text-align: left
+    }
+
+    .hero h1 {
+        font-size: 60px;
+        line-height: 1
+    }
+}
+
+@media (min-width:992px) {
+    .hero h1,.bs-docs-header p {
+        margin-right: 250px
+    }
+}
+section {
+    padding: 25px 0 25px 0;
+}
+section aside {
+    display: none;
+    width: 50%;
+    float: left;
+    padding-right: 5%;
+    text-align: left;
+    @include box-sizing(border-box);
+}
+@media (min-width: 600px) {
+    section aside {
+        display: block;
+    }
+}
+#section1 {
+    background: $section1-bg-color;
+    color: $section1-txt-color;
+}
+#section1 hr {
+    border-color: $section1-txt-color;
+}
+
+#section2 {
+    background: $section2-bg-color;
+    color: $section2-txt-color;
+}
+#section2 hr {
+    border-color: $section2-txt-color;
+}
+#section2 a {
+    color: $section2-link-color;
+}
+#section2 a:hover {
+    color: darken($section2-link-color, 20%);;
+}
+
+#section3 {
+    background: $section3-bg-color;
+    color: $section3-txt-color;
+}
+#section3 hr {
+    border-color: $section3-txt-color;
+}
+
+
+footer {
+    background: $footer-bg-color;
+    color: $footer-txt-color;
+    /*border-top: 2px solid #e5e5e5;*/
+}
+
+.browsehappy {
+    font-size: 48px;
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+.thumbnail  {
+    background: transparent;
+    border: none;
+}
+.thumbnail img {
+    @include border-radius(6px);
+}
+
+.table-row {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+}
+.emphasis {
+    font-weight: bold;
+    @include single-text-shadow;    
+}
