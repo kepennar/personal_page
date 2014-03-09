@@ -150,8 +150,6 @@ module.exports = function (grunt) {
     compass: {
       dev: {
         options: {
-          fontsDir: 'fonts',
-          fontsPath:'fonts',
           sassDir: 'app/css',
           cssDir: 'app/css', 
           outputStyle: 'expanded'
@@ -159,10 +157,10 @@ module.exports = function (grunt) {
       },
       dist: {
         options: {
-          fontsDir: 'fonts',
           sassDir: 'app/css',
-          cssDir: "'<%= yeoman.dist %>/css",
-          outputStyle: 'compressed'
+          cssDir: '<%= yeoman.dist %>/css',
+          outputStyle: 'compressed',
+          environment: 'production'
         }
       }
     },
@@ -177,8 +175,7 @@ module.exports = function (grunt) {
           src: [
             '<%= yeoman.dist %>/js/{,*/}*.js',
             '<%= yeoman.dist %>/css/{,*/}*.css',
-            '<%= yeoman.dist %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-            '<%= yeoman.dist %>/fonts/{,*/}*.{eot,svg, ttf, woff}'
+            '<%= yeoman.dist %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
           ]
         }
       }
@@ -190,16 +187,24 @@ module.exports = function (grunt) {
       }
     },
     usemin: {
-      html: ['<%= yeoman.dist %>/{,*/}*.html'],
-      css: ['<%= yeoman.dist %>/css/{,*/}*.css'],
+      html: '<%= yeoman.dist %>/{,*/}*.html',
+      css: '<%= yeoman.dist %>/css/{,*/}*.css',
+      js: '<%= yeoman.dist %>/js/*.js',
       options: {
-        dirs: ['<%= yeoman.dist %>']
+        assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/img', '<%= yeoman.dist %>/fonts'],
+        patterns: {
+          // FIXME While usemin won't have full support for revved files we have to put all references manually here
+          js: [
+              [/(img\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the JS to reference our revved images']
+          ]
+        }
       }
     },
     imagemin: {
       dist: {
         files: [{
           expand: true,
+          optimizationLevel : '7',
           cwd: 'app/img',
           src: '{,*/}*.{png,jpg,jpeg}',
           dest: '<%= yeoman.dist %>/img'
@@ -249,7 +254,8 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             'app/img/{,*/}*.{gif,webp}',
-            'fonts/{,*/}*'
+            'fonts/{,*/}*',
+            'css/{,*/}*.css'
           ]
         }, {
           expand: true,
@@ -310,9 +316,19 @@ module.exports = function (grunt) {
       dist: {
         files: {
           '<%= yeoman.dist %>/js/scripts.js': [
-            '<%= yeoman.dist %>/js/scripts.js'
+            'app/js/{,*/}*.js'
           ]
-        }
+        }        
+      },
+      libs: {
+        files: [
+          {
+            expand: true,
+            cwd: 'app/bower_components',
+            src: ['**/jquery.min.js', '**/handlebars.min.js', '**/collapse.js', '**/skrollr.min.js', '**/modernizr.js'],
+            dest: '<%= yeoman.dist %>/bower_components'
+          }
+        ]
       }
     }
   });

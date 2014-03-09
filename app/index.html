@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="bower_components/modernizr/modernizr.js"></script>
 </head>
 <body>
         <!--[if lt IE 9]>
@@ -35,18 +35,7 @@
                 </button>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="/">Link1</a>
-                    </li>
-                    <li>
-                        <a href="/">Link2</a>
-                    </li>
-                    <li>
-                        <a href="/">Link3</a>
-                    </li>
-                </ul>
-
+                
                 <ul class="nav navbar-nav navbar-right navbar-user hidden-xs">
                     <li class="me">kevin pennarun
                         <img src="http://www.gravatar.com/avatar/4812c769af6677623086b5fbd91306a7?s=64">
@@ -57,11 +46,11 @@
     </header>
 
 <div id="main">
-    <div class="section-unit hero" id="hero" data-100-top="background-position:0px 0px;" data--400-top="background-position:0px -1500px;">
+    <div class="section-unit hero" id="hero" data-100-top="background-position:0px 0px;" data--400-top="background-position:0px -400px;">
         <div class="container">
             <div class="row-fluid">
-                <h1>Ingénieur de l'École Nationale d'Ingénieurs de Brest</h1>
-                <h2>Recherche emploi d’ingénieur d’étude</h2>
+                <h1 class="emphasis">Ingénieur de l'École Nationale d'Ingénieurs de Brest</h1>
+                <h2 class="emphasis">Recherche emploi d’ingénieur d’étude</h2>
                 <a href="/" class="btn btn-primary icon-chevron-right">Contact</a>
             </div>
         </div>
@@ -74,7 +63,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="thumbnail">
-                            <img src="../img/logo_ENIB.png" alt="ENIB logo">
+                            <img src="img/logo_ENIB.png" alt="ENIB logo">
                             <div class="caption">
                                 <h2>ENIB</h2>
                                 <p><span class="emphasis">L'Ecole d'Ingénieurs de Brest</span> délivre un diplôme d'ingénieur généraliste.</p>
@@ -86,7 +75,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="thumbnail">
-                            <img src="../img/worldwide.png" alt="World Wide image">
+                            <img src="img/worldwide.png" alt="World Wide image">
                             <div class="caption">
                                 <h2>Technologies</h2>
                                 <p>
@@ -97,7 +86,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="thumbnail">
-                            <img src="../img/duke.png" alt="Duke">
+                            <img src="img/duke.png" alt="Duke">
                             <div class="caption">
                                 <h2>Java et l'écosystème de la JVM</h2>
                                 <p>
@@ -243,16 +232,20 @@
     </section>
 </footer>
 
-
+    
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/handlebars/handlebars.min.js"></script>
     <script src="bower_components/sass-bootstrap/js/collapse.js"></script>
     <script src="bower_components/skrollr/dist/skrollr.min.js"></script>
+    
+    <!-- build:js js/scripts.js -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!-- endbuild -->
+
     <!--[if lt IE 9]>
     <script src="bower_components/skrollr-ie/dist/skrollr-ie.min.js"></script>
     <![endif]-->
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-
     <script type="text/javascript">
         skrollr.init({
             mobileCheck: function() {

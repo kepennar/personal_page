@@ -1,11 +1,11 @@
 @font-face {
   font-family: "exoregular";
-  src: url('/fonts/exo/exo-regular-webfont.woff') format('woff'), url('/fonts/exo/exo-regular-webfont.ttf') format('truetype'), url('/fonts/exo/Exo-Regular.otf') format('opentype'), url('/fonts/exo/exo-regular-webfont.svg') format('svg');
+  src: url('../fonts/exo/exo-regular-webfont.woff') format('woff'), url('../fonts/exo/exo-regular-webfont.ttf') format('truetype'), url('../fonts/exo/Exo-Regular.otf') format('opentype'), url('../fonts/exo/exo-regular-webfont.svg') format('svg');
 }
 
 @font-face {
   font-family: "impactlabel";
-  src: url('/fonts/impact/Impact_Label_Reversed-webfont.woff') format('woff'), url('/fonts/impact/Impact_Label_Reversed-webfont.ttf') format('truetype'), url('/fonts/impact/Impact_Label_Reversed-webfont.otf') format('opentype'), url('/fonts/impact/Impact_Label_Reversed-webfont.svg') format('svg');
+  src: url('../fonts/impact/Impact_Label_Reversed-webfont.woff') format('woff'), url('../fonts/impact/Impact_Label_Reversed-webfont.ttf') format('truetype'), url('../fonts/impact/Impact_Label_Reversed-webfont.otf') format('opentype'), url('../fonts/impact/Impact_Label_Reversed-webfont.svg') format('svg');
 }
 
 /* line 38, main.scss */
@@ -15,7 +15,7 @@ body {
   padding: 0;
   font-family: "exoregular";
   font-size: 16px;
-  line-height: 26px;
+  line-height: 1.3;
 }
 
 /* line 47, main.scss */
@@ -82,32 +82,33 @@ header, header a {
 /* line 88, main.scss */
 .hero {
   background-image: url(../img/Birdy-Blue.png);
-  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-/* line 92, main.scss */
+/* line 93, main.scss */
 .hero h1 {
   color: #222222;
 }
 
-/* line 95, main.scss */
+/* line 96, main.scss */
 .hero h2 {
   color: #444444;
 }
 
 @media (min-width: 768px) {
-  /* line 99, main.scss */
+  /* line 100, main.scss */
   .hero {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 150px;
     font-size: 24px;
     text-align: left;
   }
 
-  /* line 106, main.scss */
+  /* line 107, main.scss */
   .hero h1 {
     font-size: 60px;
-    line-height: 1;
+    line-height: 1.3;
   }
 }
 @media (min-width: 992px) {
