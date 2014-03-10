@@ -94,6 +94,20 @@
             {{/each}}
         </script>
 
+        <script id="formation-template" type="text/x-handlebars-template">
+            <h2>{{title}}</h2>
+            {{#each formations}}
+            <hr>
+            <h3>{{{period}}}</h3>
+            <p>{{{description}}}</p>
+            <ul class="list-unstyled">
+                {{#each courses}}
+                <li><span class="emphasis">{{title}} : </span> {{description}}</li>
+                {{/each}}
+            </ul>   
+            {{/each}}
+        </script>
+
         <!-- Handlebars scripts end -->
 
 
@@ -128,21 +142,7 @@
 
 
     <section id="section3" data-bottom-top="opacity:.2;" data-center="opacity:1;">
-        <div class="container">  
-            <article>
-                <h2>FORMATIONS</h2>
-                <hr>
-                <h3>2006 à 2010</h3>
-                <p>Obtention du diplôme d'ingénieur de l'École Nationale d'Ingénieurs de Brest avec option informatique.</p>
-                <ul class="list-unstyled">
-                    <li><span class="emphasis">Méthodes de l’ingénierie informatique : </span> Algorithmique, Paradigmes de     programmation, Ingénierie modèles, Techniques de compilation.</li>
-                    <li><span class="emphasis">Architecture des systèmes : </span> Systèmes embarqués, Systèmes en réseaux, Architectures distribuées, Administration réseaux.</li>
-                    <li><span class="emphasis">Systèmes d’information : </span> Systèmes d’information, Interfaces Hommes-Machines. Développement web.</li>
-                    <li><span class="emphasis">Modélisation des systèmes complexes : </span> Réalité virtuelle, Modélisation et simulation, Ingénierie des connaissances.</li>
-                </ul>   
-                <p>Obtention du <span class="emphasis">TOEIC</span></p>
-            </article>
-        </div>
+        <div id="formationsContent" class="container"></div>
     </section>
 
 <footer id="footer">
@@ -248,6 +248,30 @@
         };
         var experiencesContext = {title: "EXPERIENCES", experiences : [experience1Context, experience2Context, experience3Context, experience4Context]};
         $("#experiencesContent").html(experiencesTemplate(experiencesContext));
+
+        var formationTemplate = Handlebars.compile($("#formation-template").html());
+        var formationsContext = {
+            title: 'FORMATIONS',
+            formations: [
+                {
+                    period: '2006 à 2010',
+                    description: 'Obtention du diplôme d\'ingénieur de l\'École Nationale d\'Ingénieurs de Brest avec option informatique.',
+                    courses : [
+                        {title: 'Méthodes de l\'ingénierie informatique', description: 'Algorithmique, Paradigmes de programmation, Ingénierie modèles, Techniques de compilation.'},
+                        {title: 'Architecture des systèmes', description: 'Systèmes embarqués, Systèmes en réseaux, Architectures distribuées, Administration réseaux.'},
+                        {title: 'Systèmes d’information', description: 'Systèmes d’information, Interfaces Hommes-Machines.'},
+                        {title: 'Modélisation des systèmes complexes', description: 'Réalité virtuelle, Modélisation et simulation, Ingénierie des connaissances.'},
+                    ]
+                },
+                {
+                    period: '2011',
+                    description: 'Obtention du <span class="emphasis">TOEIC</span>'
+                }
+
+            ]
+        };
+        $("#formationsContent").html(formationTemplate(formationsContext));
+
         skrollr.init({
             mobileCheck: function() {
                 return false;
