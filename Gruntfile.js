@@ -325,7 +325,14 @@ module.exports = function (grunt) {
           {
             expand: true,
             cwd: 'app/bower_components',
-            src: ['**/jquery.min.js', '**/handlebars.min.js', '**/collapse.js', '**/skrollr.min.js', '**/modernizr.js'],
+            src: [
+              '**/jquery.min.js', 
+              '**/handlebars.min.js', 
+              '**/collapse.js', 
+              '**/skrollr.min.js', 
+              '**/modernizr.js',
+              'q/q.js'
+            ],
             dest: '<%= yeoman.dist %>/bower_components'
           }
         ]

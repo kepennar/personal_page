@@ -22,96 +22,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
             <![endif]-->
 
-            <!-- Handlebars scripts begin -->
-    <script id="header-template" type="text/x-handlebars-template">
-        <ul class="nav navbar-nav navbar-right navbar-user hidden-xs">
-            <li class="me">{{fullname}}
-                <img src="{{gravatarUrl}}">
-            </li>
-        </ul> 
-    </script>
-
-    <script id="hero-template" type="text/x-handlebars-template">
-        <div class="row-fluid">
-            <h1 class="emphasis">{{heroTitle}}</h1>
-            <h2 class="emphasis">{{heroSubtitle}}</h2>
-            <a href="/" class="btn btn-primary icon-chevron-right">Contact</a>
-        </div>
-    </script>
-
-    <script id="section1-template" type="text/x-handlebars-template">
-            <h2>{{title}}</h2>
-            <hr>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <img src="img/logo_ENIB.png" alt="ENIB logo">
-                        <div class="caption">
-                            {{{ENIBContent}}}
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <img src="img/worldwide.png" alt="World Wide image">
-                        <div class="caption">
-                            {{{technologiesContent}}}
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <img src="img/duke.png" alt="Duke">
-                        <div class="caption">
-                            {{{javaContent}}}
-                        </div>
-                    </div>                        
-
-                </div>
-            </div>
-        </script>
-        <script id="experiences-template" type="text/x-handlebars-template">
-            <h2>{{title}}</h2>
-            {{#each experiences}}
-            <div class="container table-row">    
-                <div class="col-md-2">
-                    <span class="emphasis">{{period}}</span>
-                </div>
-                <div class="col-md-2">
-                  {{{entreprise}}}
-                </div>
-                <div class="col-md-5">
-                    {{{description}}}
-                </div>
-                <div class="col-md-3">
-                    <ul class="list-unstyled">
-                    {{#each technologies}}        
-                        <li>{{this}}</li>
-                    {{/each}}
-                    </ul>
-                </div>
-            </div>
-            {{/each}}
-        </script>
-
-        <script id="formation-template" type="text/x-handlebars-template">
-            <h2>{{title}}</h2>
-            {{#each formations}}
-            <hr>
-            <h3>{{{period}}}</h3>
-            <p>{{{description}}}</p>
-            <ul class="list-unstyled">
-                {{#each courses}}
-                <li><span class="emphasis">{{title}} : </span> {{description}}</li>
-                {{/each}}
-            </ul>   
-            {{/each}}
-        </script>
-
-        <!-- Handlebars scripts end -->
-
-
-
+    
     <header class="navbar navbar-static-top" id="header" role="banner">
         <div class="container">
             <div class="navbar-header">
@@ -122,27 +33,27 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <nav id="header-profile" class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <nav id="header-profile" class="collapse navbar-collapse bs-navbar-collapse templatedElement" role="navigation" data-template-id="header" >
             </nav>
         </div>
     </header>
 
 <div id="main">
     <div class="section-unit hero" id="hero" data-100-top="background-position:0px 0px;" data--400-top="background-position:0px -400px;">
-        <div id="hero-content" class="container"></div>
+        <div class="container templatedElement" data-template-id="hero"></div>
     </div>
 
-    <section id="section1" data-start="opacity:.2;" data-center="opacity:1;" data-bottom-top="opacity:0;">
-        <div id="section1-content" class="container"></div>
+    <section id="section1">
+        <div class="container templatedElement" data-template-id="section1"></div>
     </section>
 
-    <section id="section2" data-300-top="opacity:.2;" data-top="opacity:1;" >
-        <div id="experiencesContent" class="container"></div>
+    <section id="section2" >
+        <div class="container templatedElement" data-template-id="experiences"></div>
     </section>
 
 
-    <section id="section3" data-bottom-top="opacity:.2;" data-center="opacity:1;">
-        <div id="formationsContent" class="container"></div>
+    <section id="section3">
+        <div class="container templatedElement" data-template-id="formations"></div>
     </section>
 
 <footer id="footer">
@@ -164,6 +75,7 @@
     <script src="bower_components/handlebars/handlebars.min.js"></script>
     <script src="bower_components/sass-bootstrap/js/collapse.js"></script>
     <script src="bower_components/skrollr/dist/skrollr.min.js"></script>
+    <script src="bower_components/q/q.js"></script>
     
     <!-- build:js js/scripts.js -->
     <script src="js/plugins.js"></script>
@@ -175,103 +87,18 @@
     <![endif]-->
 
     <script type="text/javascript">
-        var headerTemplate = Handlebars.compile($("#header-template").html());
-        var headerContext = {fullname: 'Kevin Pennarun', gravatarUrl: 'http://www.gravatar.com/avatar/4812c769af6677623086b5fbd91306a7?s=64'};
-        $("#header-profile").html(headerTemplate(headerContext));
+    var lang = 'fr';
 
-        var heroTemplate = Handlebars.compile($("#hero-template").html());
-        var heroContext = {heroTitle : 'Ingénieur de l\'École Nationale d\'Ingénieurs de Brest', heroSubtitle: 'Recherche emploi d’ingénieur d’étude'};
-        $("#hero-content").html(heroTemplate(heroContext));
+	    $(".templatedElement").each(function(i, elem) {
+	    	var $elem = $(elem);
+	    	var templateId = $elem.data('template-id');
 
-        var section1Template = Handlebars.compile($("#section1-template").html());
-        var section1Context = {
-            title : 'PRESENTATION',
-            ENIBContent: '<h2>ENIB</h2><p><span class="emphasis">L\'Ecole d\'Ingénieurs de Brest</span> délivre un diplôme d\'ingénieur généraliste.</p><p>J\'y ai suivi une formation de 5 ans (prépa-intégrée). Après avoir suivi pendant 3 ans un enseignement généraliste à base d\'informatique, de mécanique et d\'éléctronique. J\'ai fais le choix de me spécialiser dans informatique en 4ème année.</p>',
-            technologiesContent : '<h2>Technologies</h2><p>Passionné depuis toujours par les technologies et les avancés techniques. C\'est en à l\'avènement du web que j\'ai naturellement fais le choix de faire de l\'informatique mon métier.</p>',
-            javaContent: '<h2>Java et l\'écosystème de la JVM</h2><p>C\'est en entrant dans le monde du travail que j\'ai pu découvrir le potentiel du language Java et de son écosystème.J\'ai été très vite passionné par les solutions Open Sources exisantes, la compréhension de leurs fonctionnements internes et leurs mises en place sur des projets.</p>'
-
-        };
-        $("#section1-content").html(section1Template(section1Context));
-
-        var experiencesTemplate = Handlebars.compile($("#experiences-template").html());
-        var experience1Context = {
-            period : 'Juin 2011 à actuellement',
-            entreprise : '<strong>Capgemini</strong> Développeur JEE (Spring).',
-            description : '<p>Participation à l\’ensemble des phases de plusieurs projets : De la conception technique à la livraison, en passant par le développement et les tests.</p><p>A COMPLETER...</p>',
-            technologies : [
-                'Spring3 (Spring core, Spring Web MVC, Spring Data)',
-                'Hibernate3',
-                'JPA2',
-                'Struts2',
-                'jQuery',
-                'FuseESB (Karaf, Camel, ActiveMQ)',
-                'Système d\'information géographique (Mapserver/Mapcache, OpenLayers)'
-            ]
-        };
-
-
-        var experience2Context = {
-            period : 'Janvier à mai 2011',
-            entreprise : '<strong>Capgemini</strong> Stage ingénieur de 5 mois',
-            description : '<p>Au sein de l’équipe de développement du projet E-scaleport.</p><p>Conception et réalisation d\'outils d\'analyses des dépendances pour des projets Java EE à architecture multi-tiers.</p>',
-            technologies : [
-                'Graphviz',
-                'Doclet',
-                'jQuery / Ajax',
-                'HTML5',
-                'jQuery',
-                'CSS3'
-            ]
-        };
-
-
-        var experience3Context = {
-            period : 'Février à aout  2010',
-            entreprise : '<strong>aC3-distribution </strong> Stage assistant ingénieur de 6 mois',
-            description : '<p>AC3-Distribution conçoit des solutions internet métier.</p><ul class="list-unstyled"><li>Conception et réalisation deux webApps (Front-End et Back-End) à destination des Smartphones dans le domaine de l\'immobilier.</li><li>Développement de fonctionnalités pour le logiciel de transactions immobilières (Immo-facile) : Registre de mandats/actes, système de gestion des noms de domaines, outil de suivi publicitaire.</li></ul>',
-            technologies : [
-                'PHP / MySQL',
-                'osCommerce',
-                'jQtouch, HTML5, CSS3, jQuery'
-            ]
-        };
-
-        var experience4Context = {
-            period : 'Juin à aout 2009',
-            entreprise : '<strong>PSA Peugeot-Citroën Poissy</strong> stage technicien de 10 semaines.',
-            description : '<ul class="list-unstyled"><li>Étude de stocks sur un type de pièces de rechange.</li><li>Participations actives à des réunions d\'équipes.</li><li>Réalisation d\'outils informatiques. Automatisations.</li></ul>',
-            technologies : [
-                'SAP',
-                'VB / VBA',
-                'Microsoft Access'
-            ]
-        };
-        var experiencesContext = {title: "EXPERIENCES", experiences : [experience1Context, experience2Context, experience3Context, experience4Context]};
-        $("#experiencesContent").html(experiencesTemplate(experiencesContext));
-
-        var formationTemplate = Handlebars.compile($("#formation-template").html());
-        var formationsContext = {
-            title: 'FORMATIONS',
-            formations: [
-                {
-                    period: '2006 à 2010',
-                    description: 'Obtention du diplôme d\'ingénieur de l\'École Nationale d\'Ingénieurs de Brest avec option informatique.',
-                    courses : [
-                        {title: 'Méthodes de l\'ingénierie informatique', description: 'Algorithmique, Paradigmes de programmation, Ingénierie modèles, Techniques de compilation.'},
-                        {title: 'Architecture des systèmes', description: 'Systèmes embarqués, Systèmes en réseaux, Architectures distribuées, Administration réseaux.'},
-                        {title: 'Systèmes d’information', description: 'Systèmes d’information, Interfaces Hommes-Machines.'},
-                        {title: 'Modélisation des systèmes complexes', description: 'Réalité virtuelle, Modélisation et simulation, Ingénierie des connaissances.'},
-                    ]
-                },
-                {
-                    period: '2011',
-                    description: 'Obtention du <span class="emphasis">TOEIC</span>'
-                }
-
-            ]
-        };
-        $("#formationsContent").html(formationTemplate(formationsContext));
-
+	    	templateLoader.getTemplate(templateId).then(function(template) {
+	        	templateLoader.getResources(templateId, lang).then(function(context) {
+	        		$elem.html(template(context));	
+	        	});
+			});
+		});
         skrollr.init({
             mobileCheck: function() {
                 return false;
