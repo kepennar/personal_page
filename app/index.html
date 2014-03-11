@@ -86,27 +86,6 @@
     <script src="bower_components/skrollr-ie/dist/skrollr-ie.min.js"></script>
     <![endif]-->
 
-    <script type="text/javascript">
-    var lang = 'fr';
-
-	    $(".templatedElement").each(function(i, elem) {
-	    	var $elem = $(elem);
-	    	var templateId = $elem.data('template-id');
-
-	    	templateLoader.getTemplate(templateId).then(function(template) {
-	        	templateLoader.getResources(templateId, lang).then(function(context) {
-	        		$elem.html(template(context));	
-	        	});
-			});
-		});
-        skrollr.init({
-            mobileCheck: function() {
-                return false;
-            },
-            forceHeight: false
-        });
-    </script>
-
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
