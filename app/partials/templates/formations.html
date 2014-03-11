@@ -1,0 +1,11 @@
+<h2>{{title}}</h2>
+{{#each formations}}
+<hr>
+<h3>{{{period}}}</h3>
+<p>{{{description}}}</p>
+<ul class="list-unstyled">
+    {{#each courses}}
+    <li><span class="emphasis">{{title}} : </span> {{description}}</li>
+    {{/each}}
+</ul>   
+{{/each}}
