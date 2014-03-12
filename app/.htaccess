@@ -5,6 +5,18 @@
 # to the main server config file (usually called `httpd.conf`), you should add
 # this logic there: http://httpd.apache.org/docs/current/howto/htaccess.html.
 
+
+
+# ##############################################################################
+# # Secure access with password                                       #
+# ##############################################################################
+AuthName "Secured"
+AuthType Basic
+AuthUserFile ".htpasswd"
+<Limit GET> 
+Require valid-user 
+</Limit> 
+
 # ##############################################################################
 # # CROSS-ORIGIN RESOURCE SHARING (CORS)                                       #
 # ##############################################################################

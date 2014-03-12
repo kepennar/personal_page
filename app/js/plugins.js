@@ -3,10 +3,10 @@
     var method;
     var noop = function () {};
     var methods = [
-        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-        'timeStamp', 'trace', 'warn'
+    'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+    'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+    'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+    'timeStamp', 'trace', 'warn'
     ];
     var length = methods.length;
     var console = (window.console = window.console || {});
@@ -21,7 +21,56 @@
     }
 }());
 
-var templateLoader = (function() {
+
+var Mediator = ( function( window, undefined ) {
+    function Mediator() {
+        this._topics = {};
+    }
+
+    Mediator.prototype.subscribe = function mediatorSubscribe( topic, callback ) {
+        if( ! this._topics.hasOwnProperty( topic ) ) {
+            this._topics[ topic ] = [];
+        }
+
+        this._topics[ topic ].push( callback );
+        return true;
+    };
+
+    Mediator.prototype.unsubscribe = function mediatorUnsubscrive( topic, callback ) {
+        if( ! this._topics.hasOwnProperty( topic ) ) {
+            return false;
+        }
+
+        for( var i = 0, len = this._topics[ topic ].length; i < len; i++ ) {
+            if( this._topics[ topic ][ i ] === callback ) {
+                this._topics[ topic ].splice( i, 1 );
+                return true;
+            }
+        }
+
+        return false;
+    };
+
+    Mediator.prototype.publish = function mediatorPublish() {
+        var args = Array.prototype.slice.call( arguments );
+        var topic = args.shift();
+
+        if( ! this._topics.hasOwnProperty( topic ) ) {
+            return false;
+        }
+
+        for( var i = 0, len = this._topics[ topic ].length; i < len; i++ ) {
+            this._topics[ topic ][ i ].apply( undefined, args );
+        }
+        return true;
+    };
+
+    return Mediator;
+
+}(window));
+
+
+var TemplateLoader = (function() {
     var defaultSuffix = '.html';
     var templateLoader = {};
     
@@ -31,12 +80,12 @@ var templateLoader = (function() {
         var deferred = Q.defer();
 
         var onload = function() {
-        if (request.status === 200) {
-            var template = Handlebars.compile(request.responseText);
-            deferred.resolve(template);
-        } else {
-            deferred.reject(new Error("Status code was " + request.status));
-        }
+            if (request.status === 200) {
+                var template = Handlebars.compile(request.responseText);
+                deferred.resolve(template);
+            } else {
+                deferred.reject(new Error("Status code was " + request.status));
+            }
         };
 
         var onerror = function() {
@@ -63,11 +112,11 @@ var templateLoader = (function() {
         var deferred = Q.defer();
 
         var onload = function() {
-        if (request.status === 200) {
-            deferred.resolve(JSON.parse(request.responseText));
-        } else {
-            deferred.reject(new Error("Status code was " + request.status));
-        }
+            if (request.status === 200) {
+                deferred.resolve(JSON.parse(request.responseText));
+            } else {
+                deferred.reject(new Error("Status code was " + request.status));
+            }
         };
 
         var onerror = function() {
@@ -93,3 +142,65 @@ var templateLoader = (function() {
 
     return templateLoader;
 }());
+
+
+var LazyShow = (function(window) {
+    var lazyShow = {};
+
+    var $q = function(q, res) {
+        if (document.querySelectorAll) {
+            res = document.querySelectorAll(q);
+        } else {
+            var d = document
+            , a = d.styleSheets[0] || d.createStyleSheet();
+            a.addRule(q,'f:b');
+            for (var l = d.all, b = 0, c = [], f = l.length; b < f; b++) {
+                l[b].currentStyle.f && c.push(l[b]);
+            }
+            a.removeRule(0);
+            res = c;
+        }
+        return res;
+    }
+    , addEventListener = function(evt, fn){
+        window.addEventListener ? 
+        this.addEventListener(evt, fn, false) : 
+        (window.attachEvent) ? this.attachEvent('on' + evt, fn) : this['on' + evt] = fn;
+    }
+    , _has = function(obj, key) {
+        return Object.prototype.hasOwnProperty.call(obj, key);
+    };
+
+    function elementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top    >= 0
+            && rect.left   >= 0
+            && rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+    }
+
+    var elems = new Array()
+    , query = $q('.lazyShow')
+    , processScroll = function() {
+        for (var i = 0; i < elems.length; i++) {
+            var elem = elems[i];
+            if (elementInViewport(elem)) {
+                console.debug('Is in view Show ', elem);
+                elem.classList.remove('lazyShow');
+                elem.classList.add('lazyShowed');
+            }
+        }
+    };
+    lazyShow.init = function() {
+        console.debug("initialize lazyShow!");
+        for (var i = 0; i < query.length; i++) {
+            elems.push(query[i]);
+        }
+        processScroll();
+        addEventListener('scroll',processScroll);      
+    };
+    
+    return lazyShow;
+
+}(this));
