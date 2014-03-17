@@ -1,0 +1,19 @@
+{
+	"title" : "AUTRES",
+	"part1": {
+		"title": "Veille technologique",
+		"description": "Veille technologique sur les nouveautés gravitant autour de la JVM et du JavaScript.  Evaluation de ces technologies en les mettant en pratique sur des projets personnels",
+		"link": {"url": "https://github.com/kepennar" , "txt": "Github"}
+	},
+	"part2": {
+		"title": "Sport",
+		"description": "Nataion, course à pied, Pratique du kayak pendant dix ans:",
+		"experiences": ["Participation à des compétitions de niveau national", "Encadrements de jeunes"]
+	},
+	"part3": {
+		"title": "Musique",
+		"description" : "Musique, guitariste",
+		"imgUrl": "img/music.png"
+	}
+
+}

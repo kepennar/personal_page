@@ -1,4 +1,4 @@
-/* line 44, main.scss */
+/* line 48, main.scss */
 body {
   background: #fefefe;
   color: #979797;
@@ -8,7 +8,7 @@ body {
   line-height: 1.3;
 }
 
-/* line 53, main.scss */
+/* line 57, main.scss */
 header {
   padding: 0;
   border-bottom: 1px solid #e7e7e7;
@@ -20,12 +20,12 @@ header {
   box-shadow: rgba(0, 0, 0, 0.08) 0 2px 5px;
 }
 
-/* line 61, main.scss */
+/* line 65, main.scss */
 header.navbar {
   margin-bottom: 0;
 }
 
-/* line 64, main.scss */
+/* line 68, main.scss */
 header .navbar-user img {
   height: 50px;
   width: 50px;
@@ -40,28 +40,28 @@ header .navbar-user img {
   -webkit-background-clip: padding-box;
 }
 
-/* line 71, main.scss */
+/* line 75, main.scss */
 header, header a {
   color: #222222;
 }
 
-/* line 74, main.scss */
+/* line 78, main.scss */
 .navbar-toggle .icon-bar {
   background-color: #222222;
 }
 
-/* line 77, main.scss */
+/* line 81, main.scss */
 .navbar-nav > li.me {
   font-weight: bold;
 }
 
-/* line 81, main.scss */
+/* line 85, main.scss */
 .nav > li > a:hover, .nav > li > a:focus {
   background-color: transparent;
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 86, main.scss */
+  /* line 90, main.scss */
   header {
     top: 0;
     position: fixed;
@@ -69,14 +69,14 @@ header, header a {
     z-index: 9999;
   }
 }
-/* line 94, main.scss */
+/* line 98, main.scss */
 .languageDropdown {
   font-family: "exoregular";
   font-size: 16px;
   cursor: pointer;
 }
 
-/* line 99, main.scss */
+/* line 103, main.scss */
 .flagAddon:before {
   display: inline-block;
   height: 14px;
@@ -85,35 +85,35 @@ header, header a {
   content: "";
 }
 
-/* line 106, main.scss */
+/* line 110, main.scss */
 .frenchFlag:before {
   background: url("../img/components/french.png") center no-repeat;
 }
 
-/* line 110, main.scss */
+/* line 114, main.scss */
 .englishFlag:before {
   background: url("../img/components/english.png") center no-repeat;
 }
 
-/* line 114, main.scss */
+/* line 118, main.scss */
 .hero {
-  background-image: url(../img/Birdy-Blue.png);
+  /*background-image: url(../img/Birdy-Blue.png);*/
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-/* line 119, main.scss */
+/* line 123, main.scss */
 .hero h1 {
   color: #222222;
 }
 
-/* line 122, main.scss */
+/* line 126, main.scss */
 .hero h2 {
   color: #444444;
 }
 
 @media (min-width: 768px) {
-  /* line 126, main.scss */
+  /* line 130, main.scss */
   .hero {
     padding-top: 60px;
     padding-bottom: 150px;
@@ -121,24 +121,24 @@ header, header a {
     text-align: left;
   }
 
-  /* line 133, main.scss */
+  /* line 137, main.scss */
   .hero h1 {
     font-size: 60px;
     line-height: 1.3;
   }
 }
 @media (min-width: 992px) {
-  /* line 139, main.scss */
+  /* line 143, main.scss */
   .hero h1, .bs-docs-header p {
     margin-right: 250px;
   }
 }
-/* line 143, main.scss */
+/* line 147, main.scss */
 section {
   padding: 25px 0 25px 0;
 }
 
-/* line 146, main.scss */
+/* line 150, main.scss */
 section aside {
   display: none;
   width: 50%;
@@ -151,62 +151,82 @@ section aside {
 }
 
 @media (min-width: 600px) {
-  /* line 155, main.scss */
+  /* line 159, main.scss */
   section aside {
     display: block;
   }
 }
-/* line 159, main.scss */
+/* line 163, main.scss */
 #section1 {
   background: #f5f3dc;
   color: #979797;
 }
 
-/* line 163, main.scss */
+/* line 167, main.scss */
 #section1 hr {
   border-color: #979797;
 }
 
-/* line 167, main.scss */
+/* line 171, main.scss */
 #section2 {
   background: #2ca5cc;
   color: black;
 }
 
-/* line 171, main.scss */
+/* line 175, main.scss */
 #section2 hr {
   border-color: black;
 }
 
-/* line 174, main.scss */
+/* line 178, main.scss */
 #section2 a {
   color: white;
 }
 
-/* line 177, main.scss */
+/* line 181, main.scss */
 #section2 a:hover {
   color: #cccccc;
 }
 
-/* line 181, main.scss */
+/* line 185, main.scss */
 #section3 {
   background: #84e1ff;
   color: black;
 }
 
-/* line 185, main.scss */
+/* line 189, main.scss */
 #section3 hr {
   border-color: black;
 }
 
-/* line 190, main.scss */
+/* line 194, main.scss */
+#section4 {
+  background: steelblue;
+  color: #fdfdfd;
+}
+
+/* line 198, main.scss */
+#section4 hr {
+  border-color: #fdfdfd;
+}
+
+/* line 201, main.scss */
+#section4 a {
+  color: #cccccc;
+}
+
+/* line 204, main.scss */
+#section4 a:hover {
+  color: #999999;
+}
+
+/* line 209, main.scss */
 footer {
   background: #454445;
   color: white;
-  /*border-top: 2px solid #e5e5e5;*/
 }
 
-/* line 196, main.scss */
+/* line 214, main.scss */
 .browsehappy {
   font-size: 48px;
   margin: 0.2em 0;
@@ -215,13 +235,13 @@ footer {
   padding: 0.2em 0;
 }
 
-/* line 205, main.scss */
+/* line 223, main.scss */
 .thumbnail {
   background: transparent;
   border: none;
 }
 
-/* line 209, main.scss */
+/* line 227, main.scss */
 .thumbnail img {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -230,13 +250,13 @@ footer {
   border-radius: 6px;
 }
 
-/* line 213, main.scss */
+/* line 231, main.scss */
 .table-row {
   border-bottom: 1px solid #eee;
   margin-bottom: 30px;
 }
 
-/* line 217, main.scss */
+/* line 235, main.scss */
 .emphasis {
   font-weight: bold;
   text-shadow: 0px -1px 1px #868686;
@@ -253,159 +273,159 @@ footer {
 }
 
 @-webkit-keyframes fadeIn {
-  /* line 238, main.scss */
+  /* line 256, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 241, main.scss */
+  /* line 259, main.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-moz-keyframes fadeIn {
-  /* line 238, main.scss */
+  /* line 256, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 241, main.scss */
+  /* line 259, main.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-ms-keyframes fadeIn {
-  /* line 238, main.scss */
+  /* line 256, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 241, main.scss */
+  /* line 259, main.scss */
   100% {
     opacity: 1;
   }
 }
 
 @keyframes fadeIn {
-  /* line 238, main.scss */
+  /* line 256, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 241, main.scss */
+  /* line 259, main.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-webkit-keyframes fadeIn {
-  /* line 248, main.scss */
+  /* line 266, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 251, main.scss */
+  /* line 269, main.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-moz-keyframes fadeIn {
-  /* line 248, main.scss */
+  /* line 266, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 251, main.scss */
+  /* line 269, main.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-ms-keyframes fadeIn {
-  /* line 248, main.scss */
+  /* line 266, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 251, main.scss */
+  /* line 269, main.scss */
   100% {
     opacity: 1;
   }
 }
 
 @keyframes fadeIn {
-  /* line 248, main.scss */
+  /* line 266, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 251, main.scss */
+  /* line 269, main.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-webkit-keyframes rollOut {
-  /* line 257, main.scss */
+  /* line 275, main.scss */
   0% {
     height: 20px;
     overflow: hidden;
   }
 
-  /* line 261, main.scss */
+  /* line 279, main.scss */
   100% {
     height: 100%;
   }
 }
 
 @-moz-keyframes rollOut {
-  /* line 257, main.scss */
+  /* line 275, main.scss */
   0% {
     height: 20px;
     overflow: hidden;
   }
 
-  /* line 261, main.scss */
+  /* line 279, main.scss */
   100% {
     height: 100%;
   }
 }
 
 @-ms-keyframes rollOut {
-  /* line 257, main.scss */
+  /* line 275, main.scss */
   0% {
     height: 20px;
     overflow: hidden;
   }
 
-  /* line 261, main.scss */
+  /* line 279, main.scss */
   100% {
     height: 100%;
   }
 }
 
 @keyframes rollOut {
-  /* line 257, main.scss */
+  /* line 275, main.scss */
   0% {
     height: 20px;
     overflow: hidden;
   }
 
-  /* line 261, main.scss */
+  /* line 279, main.scss */
   100% {
     height: 100%;
   }
 }
 
-/* line 267, main.scss */
+/* line 285, main.scss */
 .lazyShow {
   opacity: 0;
 }
 
-/* line 270, main.scss */
+/* line 288, main.scss */
 .lazyShowed {
   -webkit-animation: fadeIn 1.5s ease-in;
   -moz-animation: fadeIn 1.5s ease-in;

@@ -276,6 +276,7 @@ var Globals = (function() {
 
     return {
         MAIN_MEDIATOR: new Mediator(),
+        AVAILABLE_LANG: ["fr", "en"],
         DEFAULT_LANG: "fr"
     };
 }());

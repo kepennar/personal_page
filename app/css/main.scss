@@ -26,6 +26,10 @@ $section2-link-color: #fff;
 $section3-bg-color: #84E1FF;
 $section3-txt-color: #000;
 
+$section4-bg-color: #4682B4;
+$section4-txt-color: #FDFDFD;
+$section4-link-color: #CCC;
+
 $footer-bg-color: #454445;
 $footer-txt-color: #FFFFFF;
 
@@ -112,7 +116,7 @@ header, header a {
 }
 
 .hero {
-    background-image: url(../img/Birdy-Blue.png);
+    /*background-image: url(../img/Birdy-Blue.png);*/
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -175,7 +179,7 @@ section aside {
     color: $section2-link-color;
 }
 #section2 a:hover {
-    color: darken($section2-link-color, 20%);;
+    color: darken($section2-link-color, 20%);
 }
 
 #section3 {
@@ -187,10 +191,24 @@ section aside {
 }
 
 
+#section4 {
+    background: $section4-bg-color;
+    color: $section4-txt-color;
+}
+#section4 hr {
+    border-color: $section4-txt-color;
+}
+#section4 a {
+    color: $section4-link-color;
+}
+#section4 a:hover {
+    color: darken($section4-link-color, 20%);
+}
+
+
 footer {
     background: $footer-bg-color;
     color: $footer-txt-color;
-    /*border-top: 2px solid #e5e5e5;*/
 }
 
 .browsehappy {

@@ -1,0 +1,27 @@
+<h2>{{title}}</h2>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <h3>{{part1.title}}</h3>
+        <p>{{part1.description}}</p>
+        <p><a href="{{part1.link.url}}" target="_blank" >{{part1.link.txt}}</a>
+    </div>
+    <div class="col-md-4">
+        <h3>{{part2.title}}</h3>
+        <p>{{part2.description}}</p>
+        <ul class="unstyled">
+            {{#each part2.experiences}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <h3>{{part3.title}}</h3>
+        <div class="thumbnail">
+            <div>
+                {{{part3.description}}}
+            </div>
+            <img src="{{part3.imgUrl}}">
+        </div>
+    </div>
+</div>
