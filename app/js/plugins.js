@@ -1,27 +1,3 @@
-// Avoid `console` errors in browsers that lack a console.
-(function() {
-    var method;
-    var noop = function () {};
-    var methods = [
-    'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-    'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-    'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-    'timeStamp', 'trace', 'warn'
-    ];
-    var length = methods.length;
-    var console = (window.console = window.console || {});
-
-    while (length--) {
-        method = methods[length];
-
-        // Only stub undefined methods.
-        if (!console[method]) {
-            console[method] = noop;
-        }
-    }
-}());
-
-
 var Mediator = ( function( window, undefined ) {
     function Mediator() {
         this._topics = {};
@@ -74,7 +50,35 @@ var TemplateLoader = (function() {
     var defaultSuffix = '.html';
     var templateLoader = {};
     
-    templateLoader.getTemplate = function(templateName, suffix) {
+    templateLoader.load = function(lang) {
+
+        var templatedElements =  $(".templatedElement");
+
+        var nbElemsToTemplate = templatedElements.length
+          , nbElemsTemplated = 0;
+
+        templatedElements.each(function(i, elem) {
+            var $elem = $(elem);
+            $elem.removeClass('lazyShowed');
+            $elem.addClass('lazyShow');
+
+            var templateId = $elem.data('template-id');
+
+            getTemplate(templateId).then(function(template) {
+                getResources(templateId, lang).then(function(context) {
+                    $elem.html(template(context));
+                    nbElemsTemplated++;
+                    console.debug('Elements templated', nbElemsTemplated);
+                    if (nbElemsTemplated === nbElemsToTemplate) {
+                        console.debug('Publish "templating-end" event'); 
+                        Globals.MAIN_MEDIATOR.publish('templating-end');
+                    }
+                });
+            });
+        });
+    };
+
+    var getTemplate = function(templateName, suffix) {
 
         var request = new XMLHttpRequest();
         var deferred = Q.defer();
@@ -107,7 +111,7 @@ var TemplateLoader = (function() {
         return deferred.promise;
     };
 
-    templateLoader.getResources = function(name, lang) {
+    var getResources = function(name, lang) {
         var request = new XMLHttpRequest();
         var deferred = Q.defer();
 
@@ -147,22 +151,7 @@ var TemplateLoader = (function() {
 var LazyShow = (function(window) {
     var lazyShow = {};
 
-    var $q = function(q, res) {
-        if (document.querySelectorAll) {
-            res = document.querySelectorAll(q);
-        } else {
-            var d = document
-            , a = d.styleSheets[0] || d.createStyleSheet();
-            a.addRule(q,'f:b');
-            for (var l = d.all, b = 0, c = [], f = l.length; b < f; b++) {
-                l[b].currentStyle.f && c.push(l[b]);
-            }
-            a.removeRule(0);
-            res = c;
-        }
-        return res;
-    }
-    , addEventListener = function(evt, fn){
+    var addEventListener = function(evt, fn){
         window.addEventListener ? 
         this.addEventListener(evt, fn, false) : 
         (window.attachEvent) ? this.attachEvent('on' + evt, fn) : this['on' + evt] = fn;
@@ -181,7 +170,6 @@ var LazyShow = (function(window) {
     }
 
     var elems = new Array()
-    , query = $q('.lazyShow')
     , processScroll = function() {
         for (var i = 0; i < elems.length; i++) {
             var elem = elems[i];
@@ -194,9 +182,9 @@ var LazyShow = (function(window) {
     };
     lazyShow.init = function() {
         console.debug("initialize lazyShow!");
-        for (var i = 0; i < query.length; i++) {
-            elems.push(query[i]);
-        }
+        $('.lazyShow').each(function(i, elem) {
+            elems.push(elem);
+        });
         processScroll();
         addEventListener('scroll',processScroll);      
     };
@@ -204,3 +192,90 @@ var LazyShow = (function(window) {
     return lazyShow;
 
 }(this));
+
+
+
+
+var CookiesManager = (function() {
+    var cookiesManager = {};
+    
+    cookiesManager.setCookie = function(cName, cValue, cExpiredays, cPath, cDomain) {
+        var cExdate = new Date();
+        cExdate.setDate(cExdate.getDate() + cExpiredays);
+        // document.cookie = cName + "=" +escape(cValue)+((cExpiredays==null) ? "" : ";expires="+c_exdate.toUTCString()) +"; path="+ cPath +"; domain="+ cDomain;
+        document.cookie = cName + "=" +escape(cValue)+((cExpiredays==null) ? "" : ";expires="+cExdate.toUTCString());
+    };
+
+    cookiesManager.getCookie = function(tag) {
+        var value = null
+        var myCookie = document.cookie + ";"
+        var findTag = tag + "="
+        var endPos
+        if (myCookie.length > 0) {
+            var beginPos = myCookie.indexOf(findTag)
+            if (beginPos != -1) {
+                beginPos = beginPos + findTag.length
+                endPos = myCookie.indexOf(";",beginPos)
+                if (endPos == -1)
+                    endPos = myCookie.length
+                value = unescape(myCookie.substring(beginPos,endPos))
+            }
+        }
+        return value
+    };
+
+    cookiesManager.deleteCookie = function(cookie) {
+        var yesterday = 24 * 60 * 60 * 1000
+        var expireDate = new Date()
+        expireDate.setTime (expireDate.getTime() - yesterday)
+        document.cookie =cookie + "=" + escape("nothing") + ";" + "expires" + "=" + expireDate.toGMTString()
+    };
+
+    return cookiesManager;
+}());
+
+var MultiLanguages = (function() {
+    var multiLanguages = {};
+
+    $(document).on('click', 'a.flagAddon', function() {
+        var lang = $(this).data('selectlanguage');
+        TemplateLoader.load(lang);
+        CookiesManager.setCookie('lang', lang, 10);
+    });
+}());
+
+
+
+
+
+
+
+
+// Avoid `console` errors in browsers that lack a console.
+// Initialize default vars
+var Globals = (function() {
+    var method;
+    var noop = function () {};
+    var methods = [
+    'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+    'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+    'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+    'timeStamp', 'trace', 'warn'
+    ];
+    var length = methods.length;
+    var console = (window.console = window.console || {});
+
+    while (length--) {
+        method = methods[length];
+
+        // Only stub undefined methods.
+        if (!console[method]) {
+            console[method] = noop;
+        }
+    }
+
+    return {
+        MAIN_MEDIATOR: new Mediator(),
+        DEFAULT_LANG: "fr"
+    };
+}());

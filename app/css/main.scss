@@ -91,6 +91,26 @@ header, header a {
     }
 }
 
+.languageDropdown {
+    font-family: "exoregular";
+    font-size: $default-ft-size;
+    cursor: pointer;
+}
+.flagAddon:before {
+    display: inline-block;
+    height: 14px;
+    width: 18px;
+    margin-right: 5px; 
+    content: "";
+}
+.frenchFlag:before {
+    background: url("../img/components/french.png") center no-repeat;
+    
+}
+.englishFlag:before  {
+    background: url("../img/components/english.png") center no-repeat;
+}
+
 .hero {
     background-image: url(../img/Birdy-Blue.png);
     background-size: cover;
