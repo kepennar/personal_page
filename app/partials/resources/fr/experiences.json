@@ -1,11 +1,11 @@
 {
-    "title": "EXPERIENCES",
+    "title"       : "EXPERIENCES",
     "experiences" : [
     	{
-    		"period" : "Juin 2011 à actuellement",
-    		"entreprise" : "<strong>Capgemini</strong> Développeur JEE (Spring).",
-    		"description" : "<p>Participation à l'ensemble des phases de plusieurs projets : De la conception technique à la livraison, en passant par le développement et les tests.</p><p>A COMPLETER...</p>",
-    		"technologies" : [
+    		"period"        : "Juin 2011 à actuellement",
+    		"entreprise"    : "<strong>Capgemini</strong> Développeur JEE (Spring).",
+    		"description"   : "<p>Participation à l'ensemble des phases de plusieurs projets : De la conception technique à la livraison, en passant par le développement et les tests.</p><p>A COMPLETER...</p>",
+    		"technologies"  : [
                     "Spring3 (Spring core, Spring Web MVC, Spring Data)",
                     "Hibernate3",
                     "JPA2",
@@ -16,9 +16,9 @@
     		]
         },
         {
-    		"period" : "Janvier à mai 2011",
-            "entreprise" : "<strong>Capgemini</strong> Stage ingénieur de 5 mois",
-            "description" : "<p>Au sein de l’équipe de développement du projet E-scaleport.</p><p>Conception et réalisation d'outils d'analyses des dépendances pour des projets Java EE à architecture multi-tiers.</p>",
+    		"period"       : "Janvier à mai 2011",
+            "entreprise"   : "<strong>Capgemini</strong> Stage ingénieur de 5 mois",
+            "description"  : "<p>Au sein de l’équipe de développement du projet E-scaleport.</p><p>Conception et réalisation d'outils d'analyses des dépendances pour des projets Java EE à architecture multi-tiers.</p>",
             "technologies" : [
                 "Graphviz",
                 "Doclet",
@@ -29,9 +29,9 @@
             ]
         },
         {
-        	"period" : "Février à aout  2010",
-            "entreprise" : "<strong>aC3-distribution </strong> Stage assistant ingénieur de 6 mois",
-            "description" : "<p>AC3-Distribution conçoit des solutions internet métier.</p><ul class=\"list-unstyled\"><li>Conception et réalisation deux webApps (Front-End et Back-End) à destination des Smartphones dans le domaine de l'immobilier.</li><li>Développement de fonctionnalités pour le logiciel de transactions immobilières (Immo-facile) : Registre de mandats/actes, système de gestion des noms de domaines, outil de suivi publicitaire.</li></ul>",
+        	"period"       : "Février à aout  2010",
+            "entreprise"   : "<strong>aC3-distribution </strong> Stage assistant ingénieur de 6 mois",
+            "description"  : "<p>AC3-Distribution conçoit des solutions internet métier.</p><ul class=\"list-unstyled\"><li>Conception et réalisation deux webApps (Front-End et Back-End) à destination des Smartphones dans le domaine de l'immobilier.</li><li>Développement de fonctionnalités pour le logiciel de transactions immobilières (Immo-facile) : Registre de mandats/actes, système de gestion des noms de domaines, outil de suivi publicitaire.</li></ul>",
             "technologies" : [
                 "PHP / MySQL",
                 "osCommerce",
@@ -39,9 +39,9 @@
             ]
         },
         {
-        	"period" : "Juin à aout 2009", 
-            "entreprise" : "<strong>PSA Peugeot-Citroën Poissy</strong> stage technicien de 10 semaines.",
-            "description" : "<ul class=\"list-unstyled\"><li>Étude de stocks sur un type de pièces de rechange.</li><li>Participations actives à des réunions d'équipes.</li><li>Réalisation d'outils informatiques. Automatisations.</li></ul>",
+        	"period"       : "Juin à aout 2009", 
+            "entreprise"   : "<strong>PSA Peugeot-Citroën Poissy</strong> stage technicien de 10 semaines.",
+            "description"  : "<ul class=\"list-unstyled\"><li>Étude de stocks sur un type de pièces de rechange.</li><li>Participations actives à des réunions d'équipes.</li><li>Réalisation d'outils informatiques. Automatisations.</li></ul>",
             "technologies" : [
                 "SAP",
                 "VB / VBA",

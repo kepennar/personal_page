@@ -1,35 +1,19 @@
 (function() {
-	var lang = 'fr';
-	var mainMediator = new Mediator();
+	var getParamValue = function(param) {
+		var u = document.location.href;
+		var reg = new RegExp('(\\?|&|^)'+ param +'=(.*?)(&|$)');
+		matches = u.match(reg);
+		return (matches && matches[2] != undefined) ? decodeURIComponent(matches[2]).replace(/\+/g,' ') : null;
+	};
 
-	mainMediator.subscribe( 'templating-end', function() {LazyShow.init();});
+	Globals.MAIN_MEDIATOR.subscribe( 'templating-end', function() {LazyShow.init();});
+	
+	var lang = getParamValue('lang') || CookiesManager.getCookie('lang') || Globals.DEFAULT_LANG;
+	if (Globals.AVAILABLE_LANG.indexOf(lang) == -1) lang =Globals.DEFAULT_LANG;
+	
+	TemplateLoader.load(lang);
+
 	
 
-	var templatedElements =  $(".templatedElement");
-	var nbElemsToTemplate = templatedElements.length
-	  , nbElemsTemplated = 0;
-
-	templatedElements.each(function(i, elem) {
-		var $elem = $(elem);
-		var templateId = $elem.data('template-id');
-
-		TemplateLoader.getTemplate(templateId).then(function(template) {
-			TemplateLoader.getResources(templateId, lang).then(function(context) {
-				$elem.html(template(context));
-				nbElemsTemplated++;
-				console.debug('Elements templated', nbElemsTemplated);
-				if (nbElemsTemplated === nbElemsToTemplate) {
-					console.debug('Publish "templating-end" event'); 
-					mainMediator.publish('templating-end');
-				}
-			});
-		});
-	});
-	skrollr.init({
-		mobileCheck: function() {
-			return false;
-		},
-		forceHeight: false
-	});
 }());
 

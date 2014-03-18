@@ -1,0 +1,52 @@
+{
+    "title"       : "EXPERIENCES",
+    "experiences" : [
+    	{
+    		"period"        : "June 2011 to present",
+    		"entreprise"    : "<strong>Capgemini</strong> Java EE developer (Spring).",
+    		"description"   : "<p>Developper on several projects : From technical conception to delivery, including developement and test.</p><p>A COMPLETER...</p>",
+    		"technologies"  : [
+                    "Spring3 (Spring core, Spring Web MVC, Spring Data)",
+                    "Hibernate3",
+                    "JPA2",
+                    "Struts2",
+                    "jQuery",
+                    "FuseESB (Karaf, Camel, ActiveMQ)",
+                    "Geographic information system (Mapserver/Mapcache, OpenLayers)"
+    		]
+        },
+        {
+    		"period"       : "January to may 2011",
+            "entreprise"   : "<strong>Capgemini</strong> 5 months internship",
+            "description"  : "<p>Inside the E-scaleport project development team.</p><p>Design and implementation of dependencies analyzing tools for Java EE multitier architecture projects.</p>",
+            "technologies" : [
+                "Graphviz",
+                "Doclet",
+                "jQuery / Ajax",
+                "HTML5",
+                "jQuery",
+                "CSS3"
+            ]
+        },
+        {
+        	"period"       : "February to august 2010",
+            "entreprise"   : "<strong>aC3-distribution </strong> 6 months internship",
+            "description"  : "<p>AC3-Distribution design all-in IT business solutions.</p><ul class=\"list-unstyled\"><li>Design and implementation of 2 mobile webApps (Front-End and Back-End) for the real estate business.</li><li>Development of several functionalities for the Immo-facile real estate software : Mandates/deeds register, système de gestion des noms de domaines, outil de suivi publicitaire.</li></ul>",
+            "technologies" : [
+                "PHP / MySQL",
+                "osCommerce",
+                "jQtouch, HTML5, CSS3, jQuery"
+            ]
+        },
+        {
+        	"period"       : "Juin à aout 2009", 
+            "entreprise"   : "<strong>PSA Peugeot-Citroën Poissy</strong> stage technicien de 10 semaines.",
+            "description"  : "<ul class=\"list-unstyled\"><li>Étude de stocks sur un type de pièces de rechange.</li><li>Participations actives à des réunions d'équipes.</li><li>Réalisation d'outils informatiques. Automatisations.</li></ul>",
+            "technologies" : [
+                "SAP",
+                "VB / VBA",
+                "Microsoft Access"
+            ]
+        }
+    ]
+}

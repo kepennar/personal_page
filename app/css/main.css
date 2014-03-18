@@ -1,4 +1,484 @@
-/* line 44, main.scss */
+/* line 4, _hero.scss */
+.rw-wrapper {
+  width: 80%;
+  position: relative;
+  margin: 110px auto 0 auto;
+  padding: 10px;
+}
+
+/* line 10, _hero.scss */
+.rw-sentence {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.0001);
+}
+
+/* line 16, _hero.scss */
+.rw-sentence span {
+  color: #000;
+  white-space: nowrap;
+}
+
+/* line 20, _hero.scss */
+.rw-sentence > span:first-child {
+  display: block;
+  text-indent: 5px;
+  font-size: 145%;
+}
+
+/* line 25, _hero.scss */
+.hero-words {
+  width: 100%;
+  height: 100px;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -o-perspective: 800px;
+  -ms-perspective: 800px;
+  perspective: 800px;
+}
+
+/* line 34, _hero.scss */
+.hero-words span {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 41, _hero.scss */
+.hero-words-1 span {
+  font-size: 500%;
+  line-height: 82%;
+  -webkit-animation: rotateWordsFirst 18s linear infinite 0s;
+  -moz-animation: rotateWordsFirst 18s linear infinite 0s;
+  -o-animation: rotateWordsFirst 18s linear infinite 0s;
+  -ms-animation: rotateWordsFirst 18s linear infinite 0s;
+  animation: rotateWordsFirst 18s linear infinite 0s;
+}
+
+/* line 46, _hero.scss */
+.hero-words-2 span {
+  font-size: 300%;
+  font-style: italic;
+  text-indent: 5px;
+  line-height: 90%;
+  color: #da0a0a;
+  -webkit-animation: rotateWordsSecond 18s ease-in infinite 0s;
+  -moz-animation: rotateWordsSecond 18s ease-in infinite 0s;
+  -o-animation: rotateWordsSecond 18s ease-in infinite 0s;
+  -ms-animation: rotateWordsSecond 18s ease-in infinite 0s;
+  animation: rotateWordsSecond 18s ease-in infinite 0s;
+}
+
+/* line 54, _hero.scss */
+.hero--words span:nth-child(1) {
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -o-animation-delay: 3s;
+  -ms-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+/* line 57, _hero.scss */
+.hero-words span:nth-child(2) {
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  -o-animation-delay: 6s;
+  -ms-animation-delay: 6s;
+  animation-delay: 6s;
+}
+
+/* line 60, _hero.scss */
+.hero-words span:nth-child(3) {
+  -webkit-animation-delay: 9s;
+  -moz-animation-delay: 9s;
+  -o-animation-delay: 9s;
+  -ms-animation-delay: 9s;
+  animation-delay: 9s;
+}
+
+/* line 63, _hero.scss */
+.hero-words span:nth-child(4) {
+  -webkit-animation-delay: 12s;
+  -moz-animation-delay: 12s;
+  -o-animation-delay: 12s;
+  -ms-animation-delay: 12s;
+  animation-delay: 12s;
+}
+
+/* line 66, _hero.scss */
+.hero-words span:nth-child(5) {
+  -webkit-animation-delay: 15s;
+  -moz-animation-delay: 15s;
+  -o-animation-delay: 15s;
+  -ms-animation-delay: 15s;
+  animation-delay: 15s;
+}
+
+@-webkit-keyframes rotateWordsFirst {
+  /* line 71, _hero.scss */
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+    width: 0px;
+  }
+
+  /* line 72, _hero.scss */
+  5% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+    width: 100%;
+  }
+
+  /* line 73, _hero.scss */
+  17% {
+    opacity: 1;
+  }
+
+  /* line 74, _hero.scss */
+  20% {
+    opacity: 0;
+  }
+
+  /* line 75, _hero.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes rotateWordsFirst {
+  /* line 78, _hero.scss */
+  0% {
+    opacity: 0;
+    -moz-animation-timing-function: ease-in;
+    width: 0px;
+  }
+
+  /* line 79, _hero.scss */
+  5% {
+    opacity: 1;
+    -moz-animation-timing-function: ease-out;
+    width: 100%;
+  }
+
+  /* line 80, _hero.scss */
+  17% {
+    opacity: 1;
+  }
+
+  /* line 81, _hero.scss */
+  20% {
+    opacity: 0;
+  }
+
+  /* line 82, _hero.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes rotateWordsFirst {
+  /* line 85, _hero.scss */
+  0% {
+    opacity: 0;
+    -o-animation-timing-function: ease-in;
+    width: 0px;
+  }
+
+  /* line 86, _hero.scss */
+  5% {
+    opacity: 1;
+    -o-animation-timing-function: ease-out;
+    width: 100%;
+  }
+
+  /* line 87, _hero.scss */
+  17% {
+    opacity: 1;
+  }
+
+  /* line 88, _hero.scss */
+  20% {
+    opacity: 0;
+  }
+
+  /* line 89, _hero.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes rotateWordsFirst {
+  /* line 92, _hero.scss */
+  0% {
+    opacity: 0;
+    -ms-animation-timing-function: ease-in;
+    width: 0px;
+  }
+
+  /* line 93, _hero.scss */
+  5% {
+    opacity: 1;
+    -ms-animation-timing-function: ease-out;
+    width: 100%;
+  }
+
+  /* line 94, _hero.scss */
+  17% {
+    opacity: 1;
+  }
+
+  /* line 95, _hero.scss */
+  20% {
+    opacity: 0;
+  }
+
+  /* line 96, _hero.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rotateWordsFirst {
+  /* line 99, _hero.scss */
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+    width: 0px;
+  }
+
+  /* line 100, _hero.scss */
+  5% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+    width: 100%;
+  }
+
+  /* line 101, _hero.scss */
+  17% {
+    opacity: 1;
+  }
+
+  /* line 102, _hero.scss */
+  20% {
+    opacity: 0;
+  }
+
+  /* line 103, _hero.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotateWordsSecond {
+  /* line 106, _hero.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateZ(600px) translateX(200px);
+  }
+
+  /* line 107, _hero.scss */
+  8% {
+    opacity: 1;
+    -webkit-transform: translateZ(0px) translateX(0px);
+  }
+
+  /* line 108, _hero.scss */
+  17% {
+    opacity: 1;
+  }
+
+  /* line 109, _hero.scss */
+  25% {
+    opacity: 0;
+  }
+
+  /* line 110, _hero.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes rotateWordsSecond {
+  /* line 113, _hero.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateZ(600px) translateX(200px);
+  }
+
+  /* line 114, _hero.scss */
+  8% {
+    opacity: 1;
+    -moz-transform: translateZ(0px) translateX(0px);
+  }
+
+  /* line 115, _hero.scss */
+  17% {
+    opacity: 1;
+  }
+
+  /* line 116, _hero.scss */
+  25% {
+    opacity: 0;
+  }
+
+  /* line 117, _hero.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes rotateWordsSecond {
+  /* line 120, _hero.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateZ(600px) translateX(200px);
+  }
+
+  /* line 121, _hero.scss */
+  8% {
+    opacity: 1;
+    -o-transform: translateZ(0px) translateX(0px);
+  }
+
+  /* line 122, _hero.scss */
+  17% {
+    opacity: 1;
+  }
+
+  /* line 123, _hero.scss */
+  25% {
+    opacity: 0;
+  }
+
+  /* line 124, _hero.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes rotateWordsSecond {
+  /* line 127, _hero.scss */
+  0% {
+    opacity: 0;
+    -ms-transform: translateZ(600px) translateX(200px);
+  }
+
+  /* line 128, _hero.scss */
+  8% {
+    opacity: 1;
+    -ms-transform: translateZ(0px) translateX(0px);
+  }
+
+  /* line 129, _hero.scss */
+  17% {
+    opacity: 1;
+  }
+
+  /* line 130, _hero.scss */
+  25% {
+    opacity: 0;
+  }
+
+  /* line 131, _hero.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rotateWordsSecond {
+  /* line 134, _hero.scss */
+  0% {
+    opacity: 0;
+    transform: translateZ(600px) translateX(200px);
+  }
+
+  /* line 135, _hero.scss */
+  8% {
+    opacity: 1;
+    transform: translateZ(0px) translateX(0px);
+  }
+
+  /* line 136, _hero.scss */
+  17% {
+    opacity: 1;
+  }
+
+  /* line 137, _hero.scss */
+  25% {
+    opacity: 0;
+  }
+
+  /* line 138, _hero.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  /* line 141, _hero.scss */
+  .hero-words {
+    height: 55px;
+  }
+
+  /* line 142, _hero.scss */
+  .hero-words-1 span {
+    font-size: 280%;
+    text-indent: 5px;
+  }
+
+  /* line 143, _hero.scss */
+  .hero-words-2 span {
+    font-size: 160%;
+  }
+}
+@media screen and (max-width: 560px) {
+  /* line 146, _hero.scss */
+  .hero-words {
+    height: 40px;
+  }
+
+  /* line 147, _hero.scss */
+  .hero-words-1 span {
+    font-size: 180%;
+    text-indent: 5px;
+  }
+
+  /* line 148, _hero.scss */
+  .hero-words-2 span {
+    font-size: 90%;
+  }
+
+  /* line 149, _hero.scss */
+  .rw-sentence > span:first-child {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 400px) {
+  /* line 152, _hero.scss */
+  .hero-words {
+    height: 30px;
+  }
+
+  /* line 153, _hero.scss */
+  .hero-words-1 span {
+    font-size: 140%;
+    text-indent: 5px;
+  }
+
+  /* line 154, _hero.scss */
+  .hero-words-2 span {
+    font-size: 70%;
+  }
+
+  /* line 155, _hero.scss */
+  .rw-sentence > span:first-child {
+    font-size: 60%;
+  }
+}
+/* line 49, main.scss */
 body {
   background: #fefefe;
   color: #979797;
@@ -8,7 +488,7 @@ body {
   line-height: 1.3;
 }
 
-/* line 53, main.scss */
+/* line 58, main.scss */
 header {
   padding: 0;
   border-bottom: 1px solid #e7e7e7;
@@ -20,12 +500,12 @@ header {
   box-shadow: rgba(0, 0, 0, 0.08) 0 2px 5px;
 }
 
-/* line 61, main.scss */
+/* line 66, main.scss */
 header.navbar {
   margin-bottom: 0;
 }
 
-/* line 64, main.scss */
+/* line 69, main.scss */
 header .navbar-user img {
   height: 50px;
   width: 50px;
@@ -40,28 +520,28 @@ header .navbar-user img {
   -webkit-background-clip: padding-box;
 }
 
-/* line 71, main.scss */
+/* line 76, main.scss */
 header, header a {
   color: #222222;
 }
 
-/* line 74, main.scss */
+/* line 79, main.scss */
 .navbar-toggle .icon-bar {
   background-color: #222222;
 }
 
-/* line 77, main.scss */
+/* line 82, main.scss */
 .navbar-nav > li.me {
   font-weight: bold;
 }
 
-/* line 81, main.scss */
+/* line 86, main.scss */
 .nav > li > a:hover, .nav > li > a:focus {
   background-color: transparent;
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 86, main.scss */
+  /* line 91, main.scss */
   header {
     top: 0;
     position: fixed;
@@ -69,25 +549,51 @@ header, header a {
     z-index: 9999;
   }
 }
-/* line 94, main.scss */
+/* line 99, main.scss */
+.languageDropdown {
+  font-family: "exoregular";
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* line 104, main.scss */
+.flagAddon:before {
+  display: inline-block;
+  height: 14px;
+  width: 18px;
+  margin-right: 5px;
+  content: "";
+}
+
+/* line 111, main.scss */
+.frenchFlag:before {
+  background: url("../img/components/french.png") center no-repeat;
+}
+
+/* line 115, main.scss */
+.englishFlag:before {
+  background: url("../img/components/english.png") center no-repeat;
+}
+
+/* line 119, main.scss */
 .hero {
-  background-image: url(../img/Birdy-Blue.png);
+  /*background-image: url(../img/Birdy-Blue.png);*/
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-/* line 99, main.scss */
+/* line 124, main.scss */
 .hero h1 {
   color: #222222;
 }
 
-/* line 102, main.scss */
+/* line 127, main.scss */
 .hero h2 {
   color: #444444;
 }
 
 @media (min-width: 768px) {
-  /* line 106, main.scss */
+  /* line 131, main.scss */
   .hero {
     padding-top: 60px;
     padding-bottom: 150px;
@@ -95,24 +601,24 @@ header, header a {
     text-align: left;
   }
 
-  /* line 113, main.scss */
+  /* line 138, main.scss */
   .hero h1 {
     font-size: 60px;
     line-height: 1.3;
   }
 }
 @media (min-width: 992px) {
-  /* line 119, main.scss */
+  /* line 144, main.scss */
   .hero h1, .bs-docs-header p {
     margin-right: 250px;
   }
 }
-/* line 123, main.scss */
+/* line 148, main.scss */
 section {
   padding: 25px 0 25px 0;
 }
 
-/* line 126, main.scss */
+/* line 151, main.scss */
 section aside {
   display: none;
   width: 50%;
@@ -125,62 +631,82 @@ section aside {
 }
 
 @media (min-width: 600px) {
-  /* line 135, main.scss */
+  /* line 160, main.scss */
   section aside {
     display: block;
   }
 }
-/* line 139, main.scss */
+/* line 164, main.scss */
 #section1 {
   background: #f5f3dc;
   color: #979797;
 }
 
-/* line 143, main.scss */
+/* line 168, main.scss */
 #section1 hr {
   border-color: #979797;
 }
 
-/* line 147, main.scss */
+/* line 172, main.scss */
 #section2 {
   background: #2ca5cc;
   color: black;
 }
 
-/* line 151, main.scss */
+/* line 176, main.scss */
 #section2 hr {
   border-color: black;
 }
 
-/* line 154, main.scss */
+/* line 179, main.scss */
 #section2 a {
   color: white;
 }
 
-/* line 157, main.scss */
+/* line 182, main.scss */
 #section2 a:hover {
   color: #cccccc;
 }
 
-/* line 161, main.scss */
+/* line 186, main.scss */
 #section3 {
   background: #84e1ff;
   color: black;
 }
 
-/* line 165, main.scss */
+/* line 190, main.scss */
 #section3 hr {
   border-color: black;
 }
 
-/* line 170, main.scss */
+/* line 195, main.scss */
+#section4 {
+  background: steelblue;
+  color: #fdfdfd;
+}
+
+/* line 199, main.scss */
+#section4 hr {
+  border-color: #fdfdfd;
+}
+
+/* line 202, main.scss */
+#section4 a {
+  color: #cccccc;
+}
+
+/* line 205, main.scss */
+#section4 a:hover {
+  color: #999999;
+}
+
+/* line 210, main.scss */
 footer {
   background: #454445;
   color: white;
-  /*border-top: 2px solid #e5e5e5;*/
 }
 
-/* line 176, main.scss */
+/* line 215, main.scss */
 .browsehappy {
   font-size: 48px;
   margin: 0.2em 0;
@@ -189,13 +715,13 @@ footer {
   padding: 0.2em 0;
 }
 
-/* line 185, main.scss */
+/* line 224, main.scss */
 .thumbnail {
   background: transparent;
   border: none;
 }
 
-/* line 189, main.scss */
+/* line 228, main.scss */
 .thumbnail img {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -204,13 +730,13 @@ footer {
   border-radius: 6px;
 }
 
-/* line 193, main.scss */
+/* line 232, main.scss */
 .table-row {
   border-bottom: 1px solid #eee;
   margin-bottom: 30px;
 }
 
-/* line 197, main.scss */
+/* line 236, main.scss */
 .emphasis {
   font-weight: bold;
   text-shadow: 0px -1px 1px #868686;
@@ -227,161 +753,115 @@ footer {
 }
 
 @-webkit-keyframes fadeIn {
-  /* line 218, main.scss */
+  /* line 253, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 221, main.scss */
+  /* line 256, main.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-moz-keyframes fadeIn {
-  /* line 218, main.scss */
+  /* line 253, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 221, main.scss */
+  /* line 256, main.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-ms-keyframes fadeIn {
-  /* line 218, main.scss */
+  /* line 253, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 221, main.scss */
+  /* line 256, main.scss */
   100% {
     opacity: 1;
   }
 }
 
 @keyframes fadeIn {
-  /* line 218, main.scss */
+  /* line 253, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 221, main.scss */
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  /* line 228, main.scss */
-  0% {
-    opacity: 0;
-  }
-
-  /* line 231, main.scss */
-  100% {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes fadeIn {
-  /* line 228, main.scss */
-  0% {
-    opacity: 0;
-  }
-
-  /* line 231, main.scss */
-  100% {
-    opacity: 1;
-  }
-}
-
-@-ms-keyframes fadeIn {
-  /* line 228, main.scss */
-  0% {
-    opacity: 0;
-  }
-
-  /* line 231, main.scss */
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  /* line 228, main.scss */
-  0% {
-    opacity: 0;
-  }
-
-  /* line 231, main.scss */
+  /* line 256, main.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-webkit-keyframes rollOut {
-  /* line 237, main.scss */
+  /* line 262, main.scss */
   0% {
     height: 20px;
     overflow: hidden;
   }
 
-  /* line 241, main.scss */
+  /* line 266, main.scss */
   100% {
     height: 100%;
   }
 }
 
 @-moz-keyframes rollOut {
-  /* line 237, main.scss */
+  /* line 262, main.scss */
   0% {
     height: 20px;
     overflow: hidden;
   }
 
-  /* line 241, main.scss */
+  /* line 266, main.scss */
   100% {
     height: 100%;
   }
 }
 
 @-ms-keyframes rollOut {
-  /* line 237, main.scss */
+  /* line 262, main.scss */
   0% {
     height: 20px;
     overflow: hidden;
   }
 
-  /* line 241, main.scss */
+  /* line 266, main.scss */
   100% {
     height: 100%;
   }
 }
 
 @keyframes rollOut {
-  /* line 237, main.scss */
+  /* line 262, main.scss */
   0% {
     height: 20px;
     overflow: hidden;
   }
 
-  /* line 241, main.scss */
+  /* line 266, main.scss */
   100% {
     height: 100%;
   }
 }
 
-/* line 247, main.scss */
+/* line 272, main.scss */
 .lazyShow {
   opacity: 0;
 }
 
-/* line 250, main.scss */
+/* line 275, main.scss */
 .lazyShowed {
   -webkit-animation: fadeIn 1.5s ease-in;
   -moz-animation: fadeIn 1.5s ease-in;
+  -o-animation: fadeIn 1.5s ease-in;
+  -ms-animation: fadeIn 1.5s ease-in;
   animation: fadeIn 1.5s ease-in;
 }
