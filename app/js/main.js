@@ -10,6 +10,8 @@
 	
 	var lang = getParamValue('lang') || CookiesManager.getCookie('lang') || Globals.DEFAULT_LANG;
 	if (Globals.AVAILABLE_LANG.indexOf(lang) == -1) lang =Globals.DEFAULT_LANG;
+
+	$("#hero").smootScroll();
 	
 	TemplateLoader.load(lang);
 

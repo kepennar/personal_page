@@ -14,7 +14,21 @@
     @content;
   } 
 }
- 
+
+@mixin animation-timing-function($timing...) {
+  -o-animation-timing-function: $timing;
+  -moz-animation-timing-function: $timing;
+  -webkit-animation-timing-function: $timing;
+  animation-timing-function: $timing;
+}
+
+@mixin animation($animation...) {
+  -o-animation: $animation;
+  -moz-animation: $animation;
+  -webkit-: $animation;
+  animation: $animation;
+}
+
 
 @mixin animation ($animations...) {
   @include prefixer(animation, $animations, webkit moz o ms spec);

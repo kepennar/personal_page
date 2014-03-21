@@ -244,6 +244,51 @@ var MultiLanguages = (function() {
     });
 }());
 
+(function($){
+    $.smootScroll = function(el, options){
+        var base = this;
+        
+        base.$el = $(el);
+        base.el = el;
+        
+        base.$el.data("smootScroll", base);
+        
+        base.init = function(){
+            base.options = $.extend({},$.smootScroll.defaultOptions, options);
+            base.$el.on('click', 'a[href*=#]:not([href=#])', scroll);
+        };
+        var scroll = function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 
+                base.options.duration, 
+                base.options.easing);
+                return false;
+              }
+            }
+        };
+        
+        base.init();
+    };
+    
+    
+    $.smootScroll.defaultOptions = {
+        duration: 1000,
+        easing: 'swing'
+    };
+
+    $.fn.smootScroll = function(options){
+        return this.each(function(){
+            (new $.smootScroll(this, options));
+        });
+    };
+    
+})(jQuery);
+
 
 
 
