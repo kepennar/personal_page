@@ -40,8 +40,8 @@
         },
         {
         	"period"       : "Juin à aout 2009", 
-            "entreprise"   : "<strong>PSA Peugeot-Citroën Poissy</strong> stage technicien de 10 semaines.",
-            "description"  : "<ul class=\"list-unstyled\"><li>Étude de stocks sur un type de pièces de rechange.</li><li>Participations actives à des réunions d'équipes.</li><li>Réalisation d'outils informatiques. Automatisations.</li></ul>",
+            "entreprise"   : "<strong>PSA Peugeot-Citroën Poissy</strong> 1à weeks internship.",
+            "description"  : "<ul class=\"list-unstyled\"><li>Study state of the art for a type of car spare parts.</li><li>Active participation in team meetings.</li><li>Computer automation tools developments.</li></ul>",
             "technologies" : [
                 "SAP",
                 "VB / VBA",

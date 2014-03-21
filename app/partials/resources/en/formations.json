@@ -3,17 +3,17 @@
     "formations": [
         {
             "period"     : "2006 à 2010",
-            "description": "Obtention du diplôme d'ingénieur de l'École Nationale d'Ingénieurs de Brest avec option informatique.",
+            "description": "Obtaining engineer degree of ENIB with the computer engineering specialization.",
             "courses"    : [
-                {"title": "Méthodes de l'ingénierie informatique", "description": "Algorithmique, Paradigmes de programmation, Ingénierie modèles, Techniques de compilation."},
+                {"title": "Computer Engineering Methods", "description": "Algorithmics, Programming paradigms, Model Driven Engineering, Compilation languages and techniques."},
                 {"title": "Architecture des systèmes", "description": "Systèmes embarqués, Systèmes en réseaux, Architectures distribuées, Administration réseaux."},
-                {"title": "Systèmes d’information", "description": "Systèmes d’information, Interfaces Hommes-Machines."},
-                {"title": "Modélisation des systèmes complexes", "description": "Réalité virtuelle, Modélisation et simulation, Ingénierie des connaissances."}
+                {"title": "Information Systems", "description": "Industrial information systems, Man-machine interfaces, Service-oriented programming,  Web development."},
+                {"title": "Modeling Complex Systems", "description": "Virtual Reality, Modeling and simulation, Knowledge-driven engineering."}
             ]
         },
         {
             "period"     : "2011",
-            "description": "Obtention du <span class=\"emphasis\">TOEIC</span>"
+            "description": "<span class=\"emphasis\">TOEIC</span> obtention"
         }
     ]
 }
