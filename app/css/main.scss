@@ -255,6 +255,15 @@ footer {
     @include single-text-shadow;    
 }
 
+.no-wrap {    
+    white-space: nowrap;
+}
+.ellipsis-overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 
 
 

@@ -9,8 +9,9 @@
                     "Spring3 (Spring core, Spring Web MVC, Spring Data)",
                     "Hibernate3",
                     "JPA2",
+                    "WebServices (CXF, Jersey)",
                     "Struts2",
-                    "jQuery",
+                    "Javascript (jQuery, AngularJs)",
                     "FuseESB (Karaf, Camel, ActiveMQ)",
                     "Système d'information géographique (Mapserver/Mapcache, OpenLayers)"
     		]

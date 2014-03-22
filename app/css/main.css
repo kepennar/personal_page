@@ -865,6 +865,18 @@ footer {
   text-shadow: 0px -1px 0 #868686;
 }
 
+/* line 258, main.scss */
+.no-wrap {
+  white-space: nowrap;
+}
+
+/* line 261, main.scss */
+.ellipsis-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @font-face {
   font-family: "exoregular";
   src: url('/../fonts/exo/exo-regular-webfont.woff') format('woff'), url('/../fonts/exo/exo-regular-webfont.ttf') format('truetype'), url('/../fonts/exo/Exo-Regular.otf') format('opentype'), url('/../fonts/exo/exo-regular-webfont.svg') format('svg');
@@ -881,111 +893,111 @@ footer {
 }
 
 @-webkit-keyframes fadeIn {
-  /* line 271, main.scss */
+  /* line 280, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 274, main.scss */
+  /* line 283, main.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-moz-keyframes fadeIn {
-  /* line 271, main.scss */
+  /* line 280, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 274, main.scss */
+  /* line 283, main.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-ms-keyframes fadeIn {
-  /* line 271, main.scss */
+  /* line 280, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 274, main.scss */
+  /* line 283, main.scss */
   100% {
     opacity: 1;
   }
 }
 
 @keyframes fadeIn {
-  /* line 271, main.scss */
+  /* line 280, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 274, main.scss */
+  /* line 283, main.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-webkit-keyframes rollOut {
-  /* line 280, main.scss */
+  /* line 289, main.scss */
   0% {
     height: 20px;
     overflow: hidden;
   }
 
-  /* line 284, main.scss */
+  /* line 293, main.scss */
   100% {
     height: 100%;
   }
 }
 
 @-moz-keyframes rollOut {
-  /* line 280, main.scss */
+  /* line 289, main.scss */
   0% {
     height: 20px;
     overflow: hidden;
   }
 
-  /* line 284, main.scss */
+  /* line 293, main.scss */
   100% {
     height: 100%;
   }
 }
 
 @-ms-keyframes rollOut {
-  /* line 280, main.scss */
+  /* line 289, main.scss */
   0% {
     height: 20px;
     overflow: hidden;
   }
 
-  /* line 284, main.scss */
+  /* line 293, main.scss */
   100% {
     height: 100%;
   }
 }
 
 @keyframes rollOut {
-  /* line 280, main.scss */
+  /* line 289, main.scss */
   0% {
     height: 20px;
     overflow: hidden;
   }
 
-  /* line 284, main.scss */
+  /* line 293, main.scss */
   100% {
     height: 100%;
   }
 }
 
-/* line 290, main.scss */
+/* line 299, main.scss */
 .lazyShow {
   opacity: 0;
 }
 
-/* line 293, main.scss */
+/* line 302, main.scss */
 .lazyShowed {
   -webkit-animation: fadeIn 1s ease-in;
   -moz-animation: fadeIn 1s ease-in;
