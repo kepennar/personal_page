@@ -6,22 +6,26 @@
 		<span class="icon-bar"></span>
 	</button>
 </div>
-<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation" data-template-id="header" >
-	<ul id="header-profile" class="nav navbar-nav navbar-user hidden-xs">
-		<li class="me">
+<nav class="collapse navbar-collapse bs-navbar-collapse " role="navigation" data-template-id="header" > 
+	<ul id="header-profile" class="nav navbar-nav">
+		<li class="me hidden-xs">
 			<img src="{{gravatarUrl}}">{{fullname}}
 		</li>
-	</ul>
+		<li class="menu-separator"></li>
+		{{#each menus}}        
+        <li ><a href="{{link}}">{{title}}</a></li>
+        {{/each}}
+    </ul>
 	<ul class="nav navbar-nav navbar-right navbar-user">
 
-	<li id="languageSelection" class="dropdown languageDropdown navbar-right" data-toggle="dropdown">
-		<a href="#" class="dropdown-toggle" data-toggle="dropdown"> {{language}} <b class="caret"></b></a>
-		<ul id="languageMenu" class="dropdown-menu" role="menu">
-			<li><a role="menuitem" class="flagAddon frenchFlag" data-selectlanguage="fr" >Français</a></li>
-			<li><a role="menuitem" class="flagAddon englishFlag" data-selectlanguage="en" >English</a></li>
-		</ul>
-	</li>
+		<li id="languageSelection" class="dropdown languageDropdown navbar-right" data-toggle="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown"> {{language}} <b class="caret"></b></a>
+			<ul id="languageMenu" class="dropdown-menu" role="menu">
+				<li><a role="menuitem" class="flagAddon frenchFlag" data-selectlanguage="fr" >Français</a></li>
+				<li><a role="menuitem" class="flagAddon englishFlag" data-selectlanguage="en" >English</a></li>
+			</ul>
+		</li>
 
-</ul>
+	</ul>
 
 </nav>

@@ -1,0 +1,72 @@
+
+@media (min-width:768px) {
+
+  .menu-separator {
+    height: 10px;
+    width: 50px;
+  }
+}
+
+
+header {
+  padding: 0;
+  border-bottom: 1px solid #e7e7e7;
+  background: $header-bg-color;
+  font-size: $header-ft-size;
+  @include box-shadow(rgba(0,0,0,.08) 0 2px 5px);
+}
+@media only screen and (min-width: 768px) {
+  header.affix {
+    width: 100%;
+  }
+}
+
+header.navbar {
+  margin-bottom: 0;
+}
+header .me {
+  font-size: 24px;
+}
+header .me img {
+  height: 50px;
+  width: 50px;
+  @include box-shadow( rgba(0, 0, 0, 0.3) 0 1px 0);
+  @include border-radius(6px);
+  -webkit-background-clip: padding-box;
+}
+header, header a {
+  color: $header-txt-color;
+}
+.navbar-toggle .icon-bar {
+  background-color: $header-txt-color;
+}
+.navbar-nav > li.me {
+  font-weight: bold;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: transparent;
+}
+
+.languageDropdown {
+  cursor: pointer;
+}
+@media (min-width:768px) {
+  .languageDropdown {
+  font-size: 20px; 
+  }
+}
+.flagAddon:before {
+  display: inline-block;
+  height: 14px;
+  width: 18px;
+  margin-right: 5px; 
+  content: "";
+}
+.frenchFlag:before {
+  background: url("../img/components/french.png") center no-repeat;
+
+}
+.englishFlag:before  {
+  background: url("../img/components/english.png") center no-repeat;
+}

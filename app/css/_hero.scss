@@ -6,18 +6,52 @@
 $row-color: #E28356;
 
 
+.hero {
+    background-image: url(../img/Optimized-dof.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+     
+    overflow-x: hidden;
+    min-height: 100%;
+    position: relative;
+}
+.hero h1 {
+    color: $hero-h1-txt-color;
+}
+.hero h2 {
+    color: $hero-h2-txt-color;
+}
+@media (min-width:768px) {
+    .hero {
+        padding-top: 60px;
+        padding-bottom: 150px;
+        text-align: left
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+}
+
+@media (min-width:992px) {
+    .hero h1 {
+    	font-size:40px;
+        margin-right: 10px
+    }
+}
+
 .hero-wrapper {
-	width: 90%;
+	width: 100%;
 	position: relative;
 	margin: 110px auto 0 auto;
 	padding: 10px;
 }
-.hero-sentence{
+.hero-sentence {
 	margin: 0;
 	font-weight: 300;
-	text-shadow: 0 0 0 rgba(0,0,0,0.0001);
+    @include single-text-shadow(rgba(0,0,0,0.5), 0, 1px);
 }
-.hero-sentence span{
+.hero-sentence span {
 	color: #000;
 	white-space: nowrap;
 }
@@ -28,8 +62,8 @@ $row-color: #E28356;
 }
 .hero-words {
 	width: 100%;
-	height: 100px;
-    letter-spacing: 2px;
+	height: 100px; 
+    letter-spacing: 1px;
 	-webkit-perspective: 800px;
 	-moz-perspective: 800px;
 	-o-perspective: 800px;
@@ -46,12 +80,14 @@ $row-color: #E28356;
     overflow: hidden;
 }
 .hero-words-1 span {
+    font-family: "jrHand";
 	font-size: 500%;
 	line-height: 82%;
 	@include animation(rotateWordsFirst 18s linear infinite 0s);
 }
 
 .hero-words-2 span {
+    font-family: "gooddog";
 	font-size: 300%;
 	font-style: italic;
 	text-indent: 5px;
@@ -118,20 +154,23 @@ $row-color: #E28356;
     70% { opacity: 1; }
     100% { opacity: 0; }
 }
+@media screen and (max-width: 1200px){
+	.hero-words{ height: 55px; }
+	.hero-words-1 span{ font-size: 360%; text-indent: 5px;}
+	.hero-words-2 span { font-size: 230%; }
+}
 @media screen and (max-width: 1060px){
 	.hero-words{ height: 55px; }
-	.hero-words-1 span{ font-size: 280%; text-indent: 5px;}
-	.hero-words-2 span { font-size: 160%; }
+	.hero-words-1 span{ font-size: 330%; text-indent: 5px;}
+	.hero-words-2 span { font-size: 200%; }
 }
 @media screen and (max-width: 560px){
 	.hero-words{ height: 40px; }
 	.hero-words-1 span{ font-size: 180%; text-indent: 5px;}
 	.hero-words-2 span { font-size: 90%; }
-	.rw-sentence > span:first-child{ font-size: 80%;}
 }
 @media screen and (max-width: 400px){
 	.hero-words{ height: 30px; }
 	.hero-words-1 span{ font-size: 140%; text-indent: 5px;}
 	.hero-words-2 span { font-size: 70%; }
-	.rw-sentence > span:first-child{ font-size: 60%;}
 }

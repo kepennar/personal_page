@@ -4,16 +4,16 @@
     	{
     		"period"        : "Juin 2011 à actuellement",
     		"entreprise"    : "<strong>Capgemini</strong> Développeur JEE (Spring).",
-    		"description"   : "<p>Participation à l'ensemble des phases de plusieurs projets : De la conception technique à la livraison, en passant par le développement et les tests.</p><p>A COMPLETER...</p>",
+    		"description"   : "<p>Conception et déeveloppement sur plusieurs projets/frameworks (applications de gestion)</p><p>Développement SIG (Système d'Information Géographique)</p><p>ESB (Entreprise Service Bus)</p>",
     		"technologies"  : [
-                    "Spring3 (Spring core, Spring Web MVC, Spring Data)",
-                    "Hibernate3",
-                    "JPA2",
+                    "Spring (Spring core, Spring MVC, Spring Data)",
+                    "JPA/Hibernate",
                     "WebServices (CXF, Jersey)",
                     "Struts2",
                     "Javascript (jQuery, AngularJs)",
-                    "FuseESB (Karaf, Camel, ActiveMQ)",
-                    "Système d'information géographique (Mapserver/Mapcache, OpenLayers)"
+                    "ESB (Karaf, Camel, ActiveMQ)",
+                    "SIG (Mapserver/Mapcache, OpenLayers)",
+                    "Test (JUnit, Selenium)"
     		]
         },
         {

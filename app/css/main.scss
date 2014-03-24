@@ -9,6 +9,7 @@ $default-txt-color: #979797;
 $default-ft-size: 16px;
 
 $header-bg-color: #fff;
+$header-ft-size: 15px;
 $header-txt-color: #222;
 
 $hero-h1-txt-color: #222;
@@ -44,7 +45,6 @@ $prefix-for-microsoft: true !default;
 $prefix-for-opera:     true !default;
 $prefix-for-spec:      true !default; 
 
-@import "hero";
 html, body, #main {
     height: 100%;
 }
@@ -58,106 +58,14 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     font-smoothing: antialiased;
-    overflow-x: hidden;
 }
 a:select {
     outline: 0
 }
-header {
-    padding: 0;
-    border-bottom: 1px solid #e7e7e7;
-    background: $header-bg-color;
-    font-size: 24px;
-    @include box-shadow(rgba(0,0,0,.08) 0 2px 5px);
-}
-header.navbar {
-    margin-bottom: 0;
-}
-header .navbar-user img {
-    height: 50px;
-    width: 50px;
-    @include box-shadow( rgba(0, 0, 0, 0.3) 0 1px 0);
-    @include border-radius(6px);
-    -webkit-background-clip: padding-box;
-}
-header, header a {
-    color: $header-txt-color;
-}
-.navbar-toggle .icon-bar {
-    background-color: $header-txt-color;
-}
-.navbar-nav>li.me {
-    font-weight: bold;
-}
-
-.nav>li>a:hover, .nav>li>a:focus {
-    background-color: transparent;
-}
-
-@media only screen and (min-width: 768px){
-    header {
-        top: 0;
-        position: fixed;
-        width: 100%;
-        z-index: 9999;
-    }
-}
-
-.languageDropdown {
-    font-size: $default-ft-size;
-    cursor: pointer;
-}
-.flagAddon:before {
-    display: inline-block;
-    height: 14px;
-    width: 18px;
-    margin-right: 5px; 
-    content: "";
-}
-.frenchFlag:before {
-    background: url("../img/components/french.png") center no-repeat;
-    
-}
-.englishFlag:before  {
-    background: url("../img/components/english.png") center no-repeat;
-}
-
 #main {
     height: 100%;
 }
-.hero {
-    font-family: "shadowsintolight";
-    background-image: url(../img/dof.png);
-    background-size: cover;
-    background-repeat: no-repeat;
 
-    min-height: 100%;
-    position: relative;
-}
-.hero h1 {
-    color: $hero-h1-txt-color;
-}
-.hero h2 {
-    color: $hero-h2-txt-color;
-}
-@media (min-width:768px) {
-    .hero {
-        padding-top: 60px;
-        padding-bottom: 150px;
-        font-size: 24px;
-        text-align: left
-    }
-
-    .hero h1 {
-        font-size: 40px;
-    }
-}
-
-@media (min-width:992px) {
-    .hero h1,.bs-docs-header p {
-        margin-right: 50px
-    }
-}
 section {
     padding: 25px 0 25px 0;
 }
@@ -265,14 +173,11 @@ footer {
 }
 
 
-
-
-
-
-
-@include font-face("exoregular", font-files("exo/exo-regular-webfont.woff", "exo/exo-regular-webfont.ttf", "exo/Exo-Regular.otf", "exo/exo-regular-webfont.svg"));
-@include font-face("impactlabel", font-files("impact/Impact_Label_Reversed-webfont.woff", "impact/Impact_Label_Reversed-webfont.ttf", "impact/Impact_Label_Reversed-webfont.otf", "impact/Impact_Label_Reversed-webfont.svg"));
+@include font-face("exoregular", font-files("exo/exo-regular.woff", "exo/exo-regular.ttf", "exo/Exo-Regular.otf", "exo/exo-regular.svg"));
+@include font-face("impactlabel", font-files("impact/Impact_Label_Reversed.woff", "impact/Impact_Label_Reversed.ttf", "impact/Impact_Label_Reversed.otf", "impact/Impact_Label_Reversed.svg"));
 @include font-face("shadowsintolight", font-files("shadowsintolight/shadowsintolight.woff", "shadowsintolight/shadowsintolight.ttf", "shadowsintolight/shadowsintolight.otf", "shadowsintolight/shadowsintolight.svg"));
+@include font-face("gooddog", font-files("goodDog/gooddog.woff", "goodDog/gooddog.ttf", "goodDog/gooddog.otf", "goodDog/gooddog.svg"));
+@include font-face("jrHand", font-files("jrhand/jrha.woff", "jrhand/jrha.ttf", "jrhand/jrha.otf", "jrhand/jrha.svg"));
 
 
 // use of keyframes mixin
@@ -303,3 +208,7 @@ footer {
     @include animation(fadeIn 1s ease-in);
 }
 
+
+
+@import "header";
+@import "hero";

@@ -43,7 +43,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '.tmp/css/',
           src: '{,*/}*.css',
-          dest: '.tmp/css/'
+          dest: '<%= yeoman.dist %>/css/'
         }]
       }
     },
@@ -144,7 +144,9 @@ module.exports = function (grunt) {
       dist: {
         options: {
           sassDir: '<%= yeoman.app %>/css',
-          cssDir: '<%= yeoman.dist %>/css',
+          cssDir: '.tmp/css',
+          fontsDir: '../fonts',
+          fontsPath:'../fonts',
           outputStyle: 'compressed',
           environment: 'production'
         }
@@ -322,8 +324,7 @@ module.exports = function (grunt) {
               '**/handlebars.min.js', 
               '**/js/collapse.js', 
               '**/js/dropdown.js', 
-              '**/skrollr.min.js', 
-              '**/skrollr.ie.min.js', 
+              '**/js/affix.js', 
               '**/modernizr.js',
               '**/q.js'
             ],
