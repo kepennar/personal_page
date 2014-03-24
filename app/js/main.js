@@ -6,12 +6,15 @@
 		return (matches && matches[2] != undefined) ? decodeURIComponent(matches[2]).replace(/\+/g,' ') : null;
 	};
 
-	Globals.MAIN_MEDIATOR.subscribe( 'templating-end', function() {LazyShow.init();});
+	Globals.MAIN_MEDIATOR.subscribe( 'templating-end', 
+		function() {
+			LazyShow.init();
+			$("#hero, header").smootScroll({offset: 20});
+	});
 	
 	var lang = getParamValue('lang') || CookiesManager.getCookie('lang') || Globals.DEFAULT_LANG;
 	if (Globals.AVAILABLE_LANG.indexOf(lang) == -1) lang =Globals.DEFAULT_LANG;
 
-	$("#hero, header").smootScroll({offset: 20});	
 	TemplateLoader.load(lang);
 
 	

@@ -142,8 +142,6 @@ var TemplateLoader = (function() {
         return deferred.promise;
     };
 
-    
-
     return templateLoader;
 }());
 
@@ -241,7 +239,7 @@ var MultiLanguages = (function() {
         var lang = $(this).data('selectlanguage');
         TemplateLoader.load(lang);
         CookiesManager.setCookie('lang', lang, 10);
-        $('body').animate({
+        $('html, body').animate({
                   scrollTop: 0
                 }, 
                 1000, 
@@ -267,7 +265,7 @@ var MultiLanguages = (function() {
               var target = $(this.hash);
               target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
               if (target.length) {
-                $('body').animate({
+                $('html, body').animate({
                   scrollTop: (target.offset().top - base.options.offset)
                 }, 
                 base.options.duration, 
