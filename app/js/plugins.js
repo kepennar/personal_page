@@ -45,7 +45,10 @@ var Mediator = ( function( window, undefined ) {
 
 }(window));
 
-
+/**
+ * Managed Handlebars templates.
+ * Compile templates with resources for a language
+ */
 var TemplateLoader = (function() {
     var defaultSuffix = '.html';
     var templateLoader = {};
@@ -145,7 +148,9 @@ var TemplateLoader = (function() {
     return templateLoader;
 }());
 
-
+/**
+ * Add a smooth animation on elements when user scroll into it
+ */
 var LazyShow = (function(window) {
     var lazyShow = {};
 
@@ -193,7 +198,10 @@ var LazyShow = (function(window) {
 
 
 
-
+/**
+ * Manage Cookies
+ *  - Read/write cookie 
+ */
 var CookiesManager = (function() {
     var cookiesManager = {};
     
@@ -232,6 +240,12 @@ var CookiesManager = (function() {
     return cookiesManager;
 }());
 
+
+/**
+ * Change the language
+ *  - Reload templates with resources with selected language
+ *  - Set a cookie to remember the selected language
+ */
 var MultiLanguages = (function() {
     var multiLanguages = {};
 
@@ -247,17 +261,21 @@ var MultiLanguages = (function() {
     });
 }());
 
+
+/**
+ * JQuery plugin - Smooth scrolling when clicking on a link 
+ */
 (function($){
-    $.smootScroll = function(el, options){
+    $.smoothScroll = function(el, options){
         var base = this;
         
         base.$el = $(el);
         base.el = el;
         
-        base.$el.data("smootScroll", base);
+        base.$el.data("smoothScroll", base);
         
         base.init = function(){
-            base.options = $.extend({},$.smootScroll.defaultOptions, options);
+            base.options = $.extend({},$.smoothScroll.defaultOptions, options);
             base.$el.on('click', 'a[href*=#]:not([href=#])', scroll);
         };
         var scroll = function() {
@@ -279,21 +297,77 @@ var MultiLanguages = (function() {
     };
     
     
-    $.smootScroll.defaultOptions = {
+    $.smoothScroll.defaultOptions = {
         duration: 1000,
         offset: 0,
         easing: 'swing'
     };
 
-    $.fn.smootScroll = function(options){
+    $.fn.smoothScroll = function(options){
         return this.each(function(){
-            (new $.smootScroll(this, options));
+            (new $.smoothScroll(this, options));
         });
     };
     
 })(jQuery);
 
 
+/**
+ * JQuery plugin - Highlight
+ */
+(function($){
+    $.highlight = function(el, options){
+        var base = this;
+        
+        base.$el = $(el);
+        base.el = el;
+        
+        base.$el.data("highlight", base);
+        
+        base.init = function(){
+            base.options = $.extend({},$.highlight.defaultOptions, options);
+            base.$el.find('.highlight, .highlightable').mouseenter( highlight ).mouseleave( unhighlight );
+        };
+
+        var highlight = function() {
+            var $e = $(this);
+            var ids = $e.data('highlightids').split(/[\s,]+/);
+            var target = $e.hasClass('highlightable') ? '.highlight' : '.highlightable';
+            base.$el.find(target).each(function() {
+                var $elem = $(this);
+                var highlightids = $elem.data('highlightids').split(/[\s,]+/);
+                var hClass= 'unhighlighted';
+                for (var i = 0, l=ids.length; i < l; i++) {
+                    if (highlightids.indexOf(ids[i]) !== -1) {
+                        hClass = 'highlighted';
+                        break;
+                    }
+                }
+                $elem.addClass(hClass);
+            });            
+            $e.addClass("highlighted");
+        };
+        
+        var unhighlight = function() {
+            $(this).removeClass("highlighted");
+            base.$el.find(".highlightable").removeClass("highlighted");
+            base.$el.find(".unhighlighted").removeClass("unhighlighted");
+        };
+
+        base.init();
+    };
+    
+    
+    $.highlight.defaultOptions = {
+    };
+
+    $.fn.highlight = function(options){
+        return this.each(function(){
+            (new $.highlight(this, options));
+        });
+    };
+    
+})(jQuery);
 
 
 

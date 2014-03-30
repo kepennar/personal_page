@@ -4,16 +4,17 @@
     	{
     		"period"        : "Juin 2011 à actuellement",
     		"entreprise"    : "<strong>Capgemini</strong> Développeur JEE (Spring).",
-    		"description"   : "<p>Conception et déeveloppement sur plusieurs projets/frameworks (applications de gestion)</p><p>Développement SIG (Système d'Information Géographique)</p><p>ESB (Entreprise Service Bus)</p>",
+    		"description"   : "<p data-highlightids=\"spring, jpa, ws, struts, js, tests, server\" class=\"highlight\">Conception développement et intégration sur plusieurs projets/frameworks (applications de gestion).</p><p data-highlightids=\"gis, server\" class=\"highlight\">Développement SIG (Système d'Information Géographique)</p><p data-highlightids=\"esb, server\" class=\"highlight\">ESB (Entreprise Service Bus)</p>",
     		"technologies"  : [
-                    "Spring (Spring core, Spring MVC, Spring Data)",
-                    "JPA/Hibernate",
-                    "WebServices (CXF, Jersey)",
-                    "Struts2",
-                    "Javascript (jQuery, AngularJs)",
-                    "ESB (Karaf, Camel, ActiveMQ)",
-                    "SIG (Mapserver/Mapcache, OpenLayers)",
-                    "Test (JUnit, Selenium)"
+                    {"content": "Spring (Spring core, Spring MVC, Spring Data)",        "highlightIds": "spring"},
+                    {"content": "JPA/Hibernate",                                        "highlightIds": "jpa"},
+                    {"content": "WebServices (CXF, Jersey)",                            "highlightIds": "ws"},
+                    {"content": "Struts2",                                              "highlightIds": "struts"},
+                    {"content": "Javascript (jQuery, AngularJs)",                       "highlightIds": "js"},
+                    {"content": "ESB (Karaf, Camel, ActiveMQ)",                         "highlightIds": "esb"},
+                    {"content": "SIG (Mapserver/Mapcache, OpenLayers)",                 "highlightIds": "gis"},
+                    {"content": "Test/Integration (JUnit, Selenium, Jenkins, Sonar)",   "highlightIds": "tests"},
+                    {"content": "Serveurs (Apache, Tomcat, Jetty)",                     "highlightIds": "server"}
     		]
         },
         {
@@ -21,12 +22,12 @@
             "entreprise"   : "<strong>Capgemini</strong> Stage ingénieur de 5 mois",
             "description"  : "<p>Au sein de l’équipe de développement du projet E-scaleport.</p><p>Conception et réalisation d'outils d'analyses des dépendances pour des projets Java EE à architecture multi-tiers.</p>",
             "technologies" : [
-                "Graphviz",
-                "Doclet",
-                "jQuery / Ajax",
-                "HTML5",
-                "jQuery",
-                "CSS3"
+                {"content": "Graphviz"},
+                {"content": "Doclet"},
+                {"content": "jQuery / Ajax"},
+                {"content": "HTML5"},
+                {"content": "jQuery"},
+                {"content": "CSS3"}
             ]
         },
         {
@@ -34,9 +35,9 @@
             "entreprise"   : "<strong>aC3-distribution </strong> Stage assistant ingénieur de 6 mois",
             "description"  : "<p>AC3-Distribution conçoit des solutions internet métier.</p><ul class=\"list-unstyled\"><li>Conception et réalisation deux webApps (Front-End et Back-End) à destination des Smartphones dans le domaine de l'immobilier.</li><li>Développement de fonctionnalités pour le logiciel de transactions immobilières (Immo-facile) : Registre de mandats/actes, système de gestion des noms de domaines, outil de suivi publicitaire.</li></ul>",
             "technologies" : [
-                "PHP / MySQL",
-                "osCommerce",
-                "jQtouch, HTML5, CSS3, jQuery"
+                {"content": "PHP / MySQL"},
+                {"content": "osCommerce"},
+                {"content": "jQtouch, HTML5, CSS3, jQuery"}
             ]
         },
         {
@@ -44,9 +45,9 @@
             "entreprise"   : "<strong>PSA Peugeot-Citroën Poissy</strong> stage technicien de 10 semaines.",
             "description"  : "<ul class=\"list-unstyled\"><li>Étude de stocks sur un type de pièces de rechange.</li><li>Participations actives à des réunions d'équipes.</li><li>Réalisation d'outils informatiques. Automatisations.</li></ul>",
             "technologies" : [
-                "SAP",
-                "VB / VBA",
-                "Microsoft Access"
+                {"content": "SAP"},
+                {"content": "VB / VBA"},
+                {"content": "Microsoft Access"}
             ]
         }
     ]

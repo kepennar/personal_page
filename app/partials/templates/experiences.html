@@ -12,11 +12,9 @@
     {{{description}}}
 </div>
 <div class="col-md-4">
-    <ul class="">
-        {{#each technologies}}        
-        <li class="">{{this}}</li>
-        {{/each}}
-    </ul>
+  {{#technologies technologies}}        
+    {{content}}
+  {{/technologies}}
 </div>
 </div>
 {{/each}}

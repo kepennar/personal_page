@@ -4,16 +4,17 @@
     	{
     		"period"        : "June 2011 to present",
     		"entreprise"    : "<strong>Capgemini</strong> Java EE developer (Spring).",
-    		"description"   : "<p>Developper on several projects/frameworks (business applications)</p><p>GIS development (Geographic Information System)</p><p>ESB (Entreprise Service Bus)</p>",
+    		"description"   : "<p data-highlightids=\"spring, jpa, ws, struts, js, tests, server\" class=\"highlight\">Developper on several projects/frameworks (business applications). <br>Conception, development and integration.</p><p data-highlightids=\"gis, server\" class=\"highlight\">GIS development (Geographic Information System)</p><p data-highlightids=\"esb, server\" class=\"highlight\">ESB (Entreprise Service Bus)</p>",
     		"technologies"  : [
-                    "Spring (Spring core, Spring MVC, Spring Data)",
-                    "JPA/Hibernate",
-                    "WebServices (CXF, Jersey)",
-                    "Struts2",
-                    "Javascript (jQuery, AngularJs)",
-                    "ESB (Karaf, Camel, ActiveMQ)",
-                    "GIS (Mapserver/Mapcache, OpenLayers)",
-                    "Test (JUnit, Selenium)"
+                    {"content": "Spring (Spring core, Spring MVC, Spring Data)",    "highlightIds": "spring"},
+                    {"content": "JPA/Hibernate",                                    "highlightIds": "jpa"},
+                    {"content": "WebServices (CXF, Jersey)",                        "highlightIds": "ws"},
+                    {"content": "Struts2",                                          "highlightIds": "struts"},
+                    {"content": "Javascript (jQuery, AngularJs)",                   "highlightIds": "js"},
+                    {"content": "ESB (Karaf, Camel, ActiveMQ)",                     "highlightIds": "esb"},
+                    {"content": "GIS (Mapserver/Mapcache, OpenLayers)",             "highlightIds": "gis"},
+                    {"content": "Test/Integration (JUnit, Selenium, Jenkins, Sonar)","highlightIds": "tests"},
+                    {"content": "Serveurs (Apache, Tomcat, Jetty)",                  "highlightIds": "server"}
             ]
         },
         {
@@ -21,12 +22,12 @@
             "entreprise"   : "<strong>Capgemini</strong> 5 months internship",
             "description"  : "<p>Inside the E-scaleport project development team.</p><p>Design and implementation of dependencies analyzing tools for Java EE multitier architecture projects.</p>",
             "technologies" : [
-                "Graphviz",
-                "Doclet",
-                "jQuery / Ajax",
-                "HTML5",
-                "jQuery",
-                "CSS3"
+                {"content": "Graphviz"},
+                {"content": "Doclet"},
+                {"content": "jQuery / Ajax"},
+                {"content": "HTML5"},
+                {"content": "jQuery"},
+                {"content": "CSS3"}
             ]
         },
         {
@@ -34,9 +35,9 @@
             "entreprise"   : "<strong>aC3-distribution </strong> 6 months internship",
             "description"  : "<p>AC3-Distribution design all-in IT business solutions.</p><ul class=\"list-unstyled\"><li>Design and implementation of 2 mobile webApps (Front-End and Back-End) for the real estate business.</li><li>Development of several functionalities for the Immo-facile real estate software : Mandates/deeds register, système de gestion des noms de domaines, outil de suivi publicitaire.</li></ul>",
             "technologies" : [
-                "PHP / MySQL",
-                "osCommerce",
-                "jQtouch, HTML5, CSS3, jQuery"
+                {"content": "PHP / MySQL"},
+                {"content": "osCommerce"},
+                {"content": "jQtouch, HTML5, CSS3, jQuery"}
             ]
         },
         {
@@ -44,9 +45,9 @@
             "entreprise"   : "<strong>PSA Peugeot-Citroën Poissy</strong> 1à weeks internship.",
             "description"  : "<ul class=\"list-unstyled\"><li>Study state of the art for a type of car spare parts.</li><li>Active participation in team meetings.</li><li>Computer automation tools developments.</li></ul>",
             "technologies" : [
-                "SAP",
-                "VB / VBA",
-                "Microsoft Access"
+                {"content": "SAP"},
+                {"content": "VB / VBA"},
+                {"content": "Microsoft Access"}
             ]
         }
     ]

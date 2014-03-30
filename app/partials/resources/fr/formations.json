@@ -5,7 +5,7 @@
             "period"     : "2006 à 2010",
             "description": "Obtention du diplôme d'ingénieur de l'École Nationale d'Ingénieurs de Brest avec option informatique.",
             "courses"    : [
-                {"title": "Méthodes de l'ingénierie informatique", "description": "Algorithmique, Paradigmes de programmation, Ingénierie modèles, Techniques de compilation."},
+                {"title": "Méthodes de l'ingénierie informatique", "description": "Algorithmique, Paradigmes de programmation, Ingénierie des modèles, Techniques de compilation."},
                 {"title": "Architecture des systèmes", "description": "Systèmes embarqués, Systèmes en réseaux, Architectures distribuées, Administration réseaux."},
                 {"title": "Systèmes d’information", "description": "Systèmes d’information, Interfaces Hommes-Machines."},
                 {"title": "Modélisation des systèmes complexes", "description": "Réalité virtuelle, Modélisation et simulation, Ingénierie des connaissances."}

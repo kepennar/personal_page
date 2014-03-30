@@ -105,6 +105,15 @@ section aside {
 #section2 a:hover {
     color: darken($section2-link-color, 20%);
 }
+#section2 .highlighted {
+    @include single-transition(text-shadow, .5s, ease);
+    @include single-text-shadow(rgba(0,0,0,0.5), 2px, 1px);
+    cursor: pointer;
+}
+#section2 .unhighlighted {
+    @include single-transition(opacity, .5s, ease);
+    opacity:.35;
+}
 
 #section3 {
     background: $section3-bg-color;
