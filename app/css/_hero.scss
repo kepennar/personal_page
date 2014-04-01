@@ -7,9 +7,8 @@ $row-color: #E28356;
 
 
 .hero {
-    background-image: url(../img/Optimized-dof.png);
+    background: url(../img/Optimized-dof.png) no-repeat center center fixed;
     background-size: cover;
-    background-repeat: no-repeat;
      
     overflow-x: hidden;
     min-height: 100%;
