@@ -80,11 +80,10 @@ $row-color: #E28356;
 }
 .hero-words-1 span {
     font-family: "jrHand";
-	font-size: 500%;
+	font-size: 400%;
 	line-height: 82%;
 	@include animation(rotateWordsFirst 18s linear infinite 0s);
 }
-
 .hero-words-2 span {
     font-family: "gooddog";
 	font-size: 300%;
@@ -93,6 +92,30 @@ $row-color: #E28356;
 	line-height: 90%;
 	color: #da0a0a;
 	@include animation(rotateWordsSecond 18s ease-in infinite 0s);
+}
+@media screen and (max-width: 1600px) {
+	.hero-words-1 span{ font-size: 350%; text-indent: 5px;}
+	.hero-words-2 span { font-size: 250%; }
+}
+@media screen and (max-width: 1200px){
+	.hero-words{ height: 55px; }
+	.hero-words-1 span{ font-size: 250%; text-indent: 5px;}
+	.hero-words-2 span { font-size: 200%; }
+}
+@media screen and (max-width: 1060px){
+	.hero-words{ height: 55px; }
+	.hero-words-1 span{ font-size: 230%; text-indent: 5px;}
+	.hero-words-2 span { font-size: 170%; }
+}
+@media screen and (max-width: 560px){
+	.hero-words{ height: 40px; }
+	.hero-words-1 span{ font-size: 150%; text-indent: 5px;}
+	.hero-words-2 span { font-size: 70%; }
+}
+@media screen and (max-width: 400px){
+	.hero-words{ height: 30px; }
+	.hero-words-1 span{ font-size: 140%; text-indent: 5px;}
+	.hero-words-2 span { font-size: 70%; }
 }
 .hero--words span:nth-child(1) {
 	@include prefixer(animation-delay, 3s, webkit moz o ms spec);
@@ -109,6 +132,7 @@ $row-color: #E28356;
 .hero-words span:nth-child(5) { 
     @include prefixer(animation-delay, 15s, webkit moz o ms spec);
 }
+
 
 
 .row-next {
@@ -152,24 +176,4 @@ $row-color: #E28356;
     0% { opacity: 0; }
     70% { opacity: 1; }
     100% { opacity: 0; }
-}
-@media screen and (max-width: 1200px){
-	.hero-words{ height: 55px; }
-	.hero-words-1 span{ font-size: 360%; text-indent: 5px;}
-	.hero-words-2 span { font-size: 230%; }
-}
-@media screen and (max-width: 1060px){
-	.hero-words{ height: 55px; }
-	.hero-words-1 span{ font-size: 330%; text-indent: 5px;}
-	.hero-words-2 span { font-size: 200%; }
-}
-@media screen and (max-width: 560px){
-	.hero-words{ height: 40px; }
-	.hero-words-1 span{ font-size: 180%; text-indent: 5px;}
-	.hero-words-2 span { font-size: 90%; }
-}
-@media screen and (max-width: 400px){
-	.hero-words{ height: 30px; }
-	.hero-words-1 span{ font-size: 140%; text-indent: 5px;}
-	.hero-words-2 span { font-size: 70%; }
 }
