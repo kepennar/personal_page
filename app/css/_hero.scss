@@ -2,12 +2,13 @@
 @import "mixins/prefixer";
 @import "compass/css3/shared";
 
-
+$words1-color: #333;
+$words2-color: #4682B4;
 $row-color: #E28356;
 
 
 .hero {
-    background: url(../img/Optimized-dof.png) no-repeat center center fixed;
+    background: url(../img/Optimized-off.png) no-repeat center center fixed;
     background-size: cover;
      
     overflow-x: hidden;
@@ -51,7 +52,7 @@ $row-color: #E28356;
     @include single-text-shadow(rgba(0,0,0,0.5), 0, 1px);
 }
 .hero-sentence span {
-	color: #000;
+	color: $words1-color;
 	white-space: nowrap;
 }
 .hero-sentence > span:first-child{
@@ -90,7 +91,7 @@ $row-color: #E28356;
 	font-style: italic;
 	text-indent: 5px;
 	line-height: 90%;
-	color: #da0a0a;
+	color: $words2-color;
 	@include animation(rotateWordsSecond 18s ease-in infinite 0s);
 }
 @media screen and (max-width: 1600px) {

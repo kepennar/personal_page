@@ -34,6 +34,9 @@ header .me img {
   @include border-radius(6px);
   -webkit-background-clip: padding-box;
 }
+.navbar-nav>li>a.brand-link { 
+  padding: 0;
+}
 header, header a {
   color: $header-txt-color;
 }

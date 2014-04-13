@@ -17,14 +17,15 @@ module.exports = function (grunt) {
     yeoman: {
       // configurable paths
       app: require('./bower.json').appPath || 'app',
+      userVariables : require('./properties.json'),
       dist: 'dist'
     },
     watch: {
-    styles: {
+      styles: {
         files: ['<%= yeoman.app %>/css/{,*/}*.*'],
         tasks: ['compass:dev', 'copy:styles', 'autoprefixer']
       },
-    livereload: {
+      livereload: {
         options: {
           livereload: 35729
         },
@@ -152,11 +153,6 @@ module.exports = function (grunt) {
         }
       }
     },
-    // not used since Uglify task does concat,
-    // but still available if needed
-    /*concat: {
-      dist: {}
-    },*/
     rev: {
       dist: {
         files: {
@@ -188,17 +184,6 @@ module.exports = function (grunt) {
         }
       }
     },
-    // imagemin: {
-    //   dist: {
-    //     files: [{
-    //       expand: true,
-    //       optimizationLevel : '7',
-    //       cwd: '<%= yeoman.app %>/img',
-    //       src: '{,*/}*.{png,jpg,jpeg}',
-    //       dest: '<%= yeoman.dist %>/img'
-    //     }]
-    //   }
-    // },
     svgmin: {
       dist: {
         files: [{
@@ -271,7 +256,6 @@ module.exports = function (grunt) {
       ],
       dist: [
         'copy:styles',
-        //'imagemin',
         'svgmin',
         'htmlmin'
       ]
@@ -296,8 +280,8 @@ module.exports = function (grunt) {
         src: ['<%= yeoman.dist %>/index.html'],
           overwrite: true,                 // overwrite matched source files
           replacements: [{
-            from: '<div class="development"></div>',
-            to: '<%= yeoman.app %>/'
+            from: 'UA-XXXX-Y',
+            to: '<%= yeoman.userVariables.analyticsId %>'
           }]
         }
       },
@@ -332,6 +316,18 @@ module.exports = function (grunt) {
           }
         ]
       }
+    },
+    uncss: {
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/css/tidy.css' : ['<%= yeoman.dist %>/index.html']
+        },
+        options: {
+          stylesheets  : ['css/bootstrap.min.css'],
+          timeout      : 1000,
+          report       : 'min'
+        }
+      }
     }
   });
 
@@ -345,7 +341,6 @@ module.exports = function (grunt) {
       'concurrent:server',
       'compass:dev',
       'autoprefixer',
-      'configureProxies',
       'connect:livereload',
       'watch'
     ]);

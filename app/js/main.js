@@ -21,6 +21,16 @@
 	});
 
 
+	// TEST
+	if (!Modernizr.touch) {
+		$('#header').on('click', 'a#contact', function() {
+			$('footer').addClass('peep');
+			setTimeout(function() {
+				$('footer').removeClass('peep');
+			});
+		});
+	}
+	// /TEST
 
 
 	Globals.MAIN_MEDIATOR.subscribe( 'templating-end', 

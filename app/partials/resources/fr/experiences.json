@@ -14,7 +14,7 @@
                     {"content": "ESB (Karaf, Camel, ActiveMQ)",                         "highlightIds": "esb"},
                     {"content": "SIG (Mapserver/Mapcache, OpenLayers)",                 "highlightIds": "gis"},
                     {"content": "Test/Integration (JUnit, Selenium, Jenkins, Sonar)",   "highlightIds": "tests"},
-                    {"content": "Serveurs (Apache, Tomcat, Jetty)",                     "highlightIds": "server"}
+                    {"content": "Serveurs (Apache httpd, Tomcat, Jetty)",               "highlightIds": "server"}
     		]
         },
         {

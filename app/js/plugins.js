@@ -350,7 +350,7 @@ var MultiLanguages = (function() {
         
         var unhighlight = function() {
             $(this).removeClass("highlighted");
-            base.$el.find(".highlightable").removeClass("highlighted");
+            base.$el.find(".highlighted").removeClass("highlighted");
             base.$el.find(".unhighlighted").removeClass("unhighlighted");
         };
 

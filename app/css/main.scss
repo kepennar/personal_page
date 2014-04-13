@@ -106,12 +106,12 @@ section aside {
     color: darken($section2-link-color, 20%);
 }
 #section2 .highlighted {
-    @include single-transition(text-shadow, .5s, ease);
+    @include single-transition(text-shadow, .3s, ease);
     @include single-text-shadow(rgba(0,0,0,0.5), 2px, 1px);
     cursor: pointer;
 }
 #section2 .unhighlighted {
-    @include single-transition(opacity, .5s, ease);
+    @include single-transition(opacity, .2s, ease);
     opacity:.35;
 }
 
@@ -221,3 +221,7 @@ footer {
 
 @import "header";
 @import "hero";
+
+.peep{
+    @include animation(sparkle 2s ease-in-out infinite 0s);
+}

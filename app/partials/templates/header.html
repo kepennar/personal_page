@@ -9,11 +9,11 @@
 <nav class="collapse navbar-collapse bs-navbar-collapse " role="navigation" data-template-id="header" > 
 	<ul id="header-profile" class="nav navbar-nav">
 		<li class="me hidden-xs">
-			<img src="{{gravatarUrl}}">{{fullname}}
+			<a href="#top" class="brand-link" ><img src="{{gravatarUrl}}">{{fullname}}</a>
 		</li>
 		<li class="menu-separator"></li>
 		{{#each menus}}        
-        <li ><a href="{{link}}">{{title}}</a></li>
+        <li ><a id="{{id}}" href="{{link}}">{{title}}</a></li>
         {{/each}}
     </ul>
 	<ul class="nav navbar-nav navbar-right navbar-user">

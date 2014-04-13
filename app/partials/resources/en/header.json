@@ -3,10 +3,10 @@
 	"fullname"   : "Kevin Pennarun",
 	"gravatarUrl": "http://www.gravatar.com/avatar/4812c769af6677623086b5fbd91306a7?s=64",
 	"menus" : [
-		{"title" : "Presentation", "link": "#section1"},
-		{"title" : "Experiences", "link": "#section2"},
-		{"title" : "Formation", "link": "#section3"},
-		{"title" : "Others", "link": "#section4"},
-		{"title" : "Contact", "link": "#footer"}
+		{"id": "presentation", "title" : "Presentation", "link": "#section1"},
+		{"id": "experiences", "title" : "Experiences", "link": "#section2"},
+		{"id": "formation", "title" : "Formation", "link": "#section3"},
+		{"id": "others", "title" : "Others", "link": "#section4"},
+		{"id": "contact", "title" : "Contact", "link": "#footer"}
 	]
 }
