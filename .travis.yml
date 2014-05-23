@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '0.10'
+env:
+  global:
+  - secure: SYvgwg81M0zPpx2b2GSNMr5G0DarcDdMznEyLy2CYjtBJN9Lf/dwt/XKUORWm/kQjasn5GJJpTvAHq17OjcuZnfAJshWZW1Nxq2j21W4q4Pb0jt1CoQ+4jWWlLdNdyYcul9dXEyTTIanVaIgq419C+Qr1YllJkgk8DWnjhFma4k=
+  - secure: UaO7zLdrvcX3sil0Cjlvf4SEu5jLluSD7egHh6Gheo0n+zyydSKQYVHrVElk4GtQYdThNg0VYdznBHIVJ/pdFlSBDyyX2ibz3ZZGdKCuqE5AWGg1sHbEerQaYJaXujDSE2epQcSZAJ9sl6bF3UCZln9ulU3l51mcqYm0/uAdM5A=
+  - secure: MnVWyYXsQaquNKxe2R7tOsx+2FpBUUG7LbjzkL/cy+Wx/ZLPZ3RxzD2tIXG1xV66QY2r7wQnYuvNGhqX4EUI6NY2pUt5fO124JxE7v4zKfKnxflU10QjLIxHmSRQUjIaibA20QQd0ZAb/pxLdP1DYcXrFFE64/A4RVRVtkiMRVM=
+  - secure: Z3jpfS2y5YPawjXTZ5RxeViKcGH2ZxI3DX0SdhYIMYDz71KB+uR1xV4ZQwWgjKb7IUXLDr67CRX8ygHHv4HM9J6ctQAr2Tuk7MXe1lRkIetgIhUGbfvl2vBMchxL0LsBCskfxW75CKTAI8y94MNBy5yJsYsb/VocyTXyc+1dSZs=
+
+after_success: bundle exec travis-custom-deploy sftp _site/

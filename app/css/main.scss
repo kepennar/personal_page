@@ -118,6 +118,7 @@ section aside {
 #section3 {
     background: $section3-bg-color;
     color: $section3-txt-color;
+    line-height: 160%;
     @include single-text-shadow(#fff, 0, 1px);
 }
 #section3 hr {

@@ -1,6 +1,6 @@
 {
 	"title"               : "PRESENTATION",
-	"ENIBContent"         : "<h2>ENIB</h2><p><span class=\"emphasis\">L'Ecole d'Ingénieurs de Brest</span> délivre un diplôme d'ingénieur généraliste.</p><p>J'y ai suivi une formation de 5 ans (prépa-intégrée). Après un enseignement généraliste de 3 ans, à base d'informatique, de mécanique et d'électronique, j'ai fait le choix de me spécialiser dans informatique en 4ème année.</p>",
+	"ENIBContent"         : "<h2>ENIB</h2><p><span class=\"emphasis\">L'Ecole d'Ingénieurs de Brest</span> délivre un diplôme d'ingénieur généraliste.</p><p>J'y ai suivi une formation de 5 ans (prépa-intégrée). Après un enseignement généraliste de 3 ans, à base d'informatique, de mécanique et d'électronique, j'ai fait le choix de me spécialiser dans l'informatique en 4ème année.</p>",
 	"technologiesContent" : "<h2>Technologies</h2><p>Passionné depuis toujours par les technologies et les avancés techniques. C'est en assistant à l'avènement du web que j'ai naturellement fais le choix de faire de l'informatique mon métier.</p>",
-	"javaContent"         : "<h2>Java et l'écosystème de la JVM</h2><p>C'est en entrant dans le monde du travail que j'ai pu découvrir le potentiel du language Java et de son écosystème.J'ai très vite été passionné par les solutions Open Sources exisantes, la compréhension de leurs fonctionnements internes et leurs mises en place sur des projets.</p>"
+	"javaContent"         : "<h2>Java et l'écosystème de la JVM</h2><p>En entrant dans le monde du travail, j'ai pu découvrir le potentiel du language Java et de son écosystème.J'ai très vite été passionné par les solutions Open Sources exisantes, la compréhension de leurs fonctionnements internes et leurs mises en place sur des projets.</p>"
 }
