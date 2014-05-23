@@ -9,4 +9,4 @@ env:
   - secure: Z3jpfS2y5YPawjXTZ5RxeViKcGH2ZxI3DX0SdhYIMYDz71KB+uR1xV4ZQwWgjKb7IUXLDr67CRX8ygHHv4HM9J6ctQAr2Tuk7MXe1lRkIetgIhUGbfvl2vBMchxL0LsBCskfxW75CKTAI8y94MNBy5yJsYsb/VocyTXyc+1dSZs=
 
 after_success:
-  "curl --ftp-create-dirs -T dist -u $DEPLOY_USERNAME:$DEPLOY_PASSWORD ftp://$DEPLOY_HOST$DEPLOY_REMOTEDIR"
+  "curl -T /home/travis/build/kepennar/personal_page/dist -u $DEPLOY_USERNAME:$DEPLOY_PASSWORD ftp://$DEPLOY_HOST$DEPLOY_REMOTEDIR"
