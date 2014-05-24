@@ -1,21 +1,19 @@
 language: node_js
 node_js:
 - '0.10'
-
-before_install: 
-  - gem update --system
-  - gem install sass --version "=3.3.7"
-  - gem install compass --version "=0.12.3"
-  - npm install -g grunt-cli
+before_install:
+- gem update --system
+- gem install sass --version "=3.3.7"
+- gem install compass --version "=0.12.3"
+- npm install -g grunt-cli
 install: npm install
 before_script: grunt build
 
 env:
   global:
-  - secure: SYvgwg81M0zPpx2b2GSNMr5G0DarcDdMznEyLy2CYjtBJN9Lf/dwt/XKUORWm/kQjasn5GJJpTvAHq17OjcuZnfAJshWZW1Nxq2j21W4q4Pb0jt1CoQ+4jWWlLdNdyYcul9dXEyTTIanVaIgq419C+Qr1YllJkgk8DWnjhFma4k=
-  - secure: UaO7zLdrvcX3sil0Cjlvf4SEu5jLluSD7egHh6Gheo0n+zyydSKQYVHrVElk4GtQYdThNg0VYdznBHIVJ/pdFlSBDyyX2ibz3ZZGdKCuqE5AWGg1sHbEerQaYJaXujDSE2epQcSZAJ9sl6bF3UCZln9ulU3l51mcqYm0/uAdM5A=
-  - secure: MnVWyYXsQaquNKxe2R7tOsx+2FpBUUG7LbjzkL/cy+Wx/ZLPZ3RxzD2tIXG1xV66QY2r7wQnYuvNGhqX4EUI6NY2pUt5fO124JxE7v4zKfKnxflU10QjLIxHmSRQUjIaibA20QQd0ZAb/pxLdP1DYcXrFFE64/A4RVRVtkiMRVM=
-  - secure: Z3jpfS2y5YPawjXTZ5RxeViKcGH2ZxI3DX0SdhYIMYDz71KB+uR1xV4ZQwWgjKb7IUXLDr67CRX8ygHHv4HM9J6ctQAr2Tuk7MXe1lRkIetgIhUGbfvl2vBMchxL0LsBCskfxW75CKTAI8y94MNBy5yJsYsb/VocyTXyc+1dSZs=
+  - secure: fH0LA0BEkxNq55AyYXJQtfpqMaynrV3YQ8hVRle2Qmz/kKZNruc/rzyc96pXz3tVZpv6yIyLYcxe+I12QnWz8ue0YAAtI4pXgl/VWmEqhHseIsdQriwoIqHyuAx0n50Optu1ZU3XExct7dO1qQJFca0gM81TSlB6K+Q4REYqJtg=
+  - secure: XHfe0g0v6oLzBQTVQa7LifI9GBtbS0clCCYnlXwV6WChJfmBMoYpqYAAUfA7DJIEugYLiInhdAItLsi1s04pUaLK1Jx7AXK+L/RBZkpNqiuiHqimCIf2BHYXJfsVUqAaiueSMssgVl1XTm/eZLhGPBKuxYfZ4/09qQxePsNtyvQ=
+  - secure: gHkjfV0xQjeUSdFU7Z+h0VIG/KRixLw218bGwinVLdWjAYnkLUV8xWaI/NZ/VkRf/qsN7Z6MU8w70utiY6xu+eiXPzgM/ZBcq867sMS20dfyBZNr1BCQ1qDWmCla5+D8oWmwLHm6ga9WHmuVzEYY/sJzdrRKin4n8uAMqrSSt8k=
+  - secure: GZLTRtGGNrypoXgoAd59hVc3dFnsnoOu3RoOwSjeP2J7DK/wXrNYc64nM7LnmudnPA8yXTv4YZVmlqdcoNk3YaxGTS5ilQ7r4vrLk54q/SbhVVTJqJauSR0JRemjDKNhPjutB4QxxYgscbZ2INEtk1+tJRHUJfOeyEKlPBCZV/U=
 
-after_success:
-  "find $TRAVIS_BUILD_DIR/dist/. -type f -exec curl -u $DEPLOY_USERNAME:$DEPLOY_PASSWORD --ftp-create-dirs -T {} ftp://$DEPLOY_HOST/$DEPLOY_REMOTEDIR"
+after_success: find $TRAVIS_BUILD_DIR/dist/. -type f -exec curl -u $DEPLOY_USERNAME:$DEPLOY_PASSWORD --ftp-create-dirs -T {} ftp://$DEPLOY_HOST/$DEPLOY_REMOTEDIR
