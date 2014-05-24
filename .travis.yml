@@ -8,11 +8,15 @@ before_install:
 - npm install -g grunt-cli
 install: npm install
 before_script: grunt build
+
+
 env:
   global:
-  - secure: fH0LA0BEkxNq55AyYXJQtfpqMaynrV3YQ8hVRle2Qmz/kKZNruc/rzyc96pXz3tVZpv6yIyLYcxe+I12QnWz8ue0YAAtI4pXgl/VWmEqhHseIsdQriwoIqHyuAx0n50Optu1ZU3XExct7dO1qQJFca0gM81TSlB6K+Q4REYqJtg=
-  - secure: XHfe0g0v6oLzBQTVQa7LifI9GBtbS0clCCYnlXwV6WChJfmBMoYpqYAAUfA7DJIEugYLiInhdAItLsi1s04pUaLK1Jx7AXK+L/RBZkpNqiuiHqimCIf2BHYXJfsVUqAaiueSMssgVl1XTm/eZLhGPBKuxYfZ4/09qQxePsNtyvQ=
-  - secure: gHkjfV0xQjeUSdFU7Z+h0VIG/KRixLw218bGwinVLdWjAYnkLUV8xWaI/NZ/VkRf/qsN7Z6MU8w70utiY6xu+eiXPzgM/ZBcq867sMS20dfyBZNr1BCQ1qDWmCla5+D8oWmwLHm6ga9WHmuVzEYY/sJzdrRKin4n8uAMqrSSt8k=
-  - secure: cRSpmh5tx8Hq/1qci541I8BgoCi1AqEncITJydKEQRHQ+fxvtbiFpjTVF/NfdZ/lbiR+XohpIpsVn67y1ZAi8QRIbRbc9z5p8bysND7xzkxwXzpwvETNBdVDSIRm6V8EQpWBeDnUHq7piRYkD6acZws3ebf1oXS9uaOlFwPZlfA=
+  - secure: LVTdIisxLOLfk8NRPqlHhm8e2w27RqfxruRtyl/SbMgTlQ0Ak1yrmq/01pSmXMKmaVBWXeADYs/xFcuiQYQUIW7cdl5G7o5cUtrHvqpU5wk8chACOtE4w7NoTYzYzuZijb3FKU/7r/jszy0zVxHtyNLOPCCTXfdBjEl7Lb0ZFrU=
+  - secure: I/ZoPFnD7ZSVPYleE7sJcR5OF9nOh9eCcIMl9YbFRpv37Sp2jR5K/F/+xdb+kgTLQEeLpgXgkXaXGZ+k51m0SJJSHUsxV/PTxjHbHZQgK+8lGLlEq3Rc2J8c2z1okUdIPK9MmRbUmPS9+rt4hmQMILIR+9WrVHVerRukJjDBAh4=
+  - secure: YPKjI0T+8jn8UsxNbN64Go4liUjzvnOgI18DBeyCTWL8xDWoWk+cwvvbxLu5Upd9QdURL7hjwMNPD+O3TxrGQkNpv1QQTjaOJdCLyuuFVEXfDCh5Qky0DCUigl6qPGC5L4EjYuxZ6qHyVx0+IidSIk0eZNSJxNhinByfRIddUfE=
+  - secure: ESzZAwc60NUVNw6IExSAxf05YVsbcbq6T32u1OTllh5TszZlqQPZmrRGvmCrCMIkiggTJPRJXS5HFtWmYGCA6KC1Ee3ayqjSC0BXEI0/ujhjAbk3oBcQmxqnL1wxjV/sTu2+JzVPvU8jeycWXyXqWCfmvHBsKYE3SdA4AbiGino=
+
+
 after_success: find $TRAVIS_BUILD_DIR/dist/. -type f -exec curl -u $DEPLOY_USERNAME:$DEPLOY_PASSWORD
   --ftp-create-dirs -T {} $DEPLOY_HOST/$DEPLOY_REMOTEDIR \;
