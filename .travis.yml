@@ -18,4 +18,4 @@ env:
   - secure: Z3jpfS2y5YPawjXTZ5RxeViKcGH2ZxI3DX0SdhYIMYDz71KB+uR1xV4ZQwWgjKb7IUXLDr67CRX8ygHHv4HM9J6ctQAr2Tuk7MXe1lRkIetgIhUGbfvl2vBMchxL0LsBCskfxW75CKTAI8y94MNBy5yJsYsb/VocyTXyc+1dSZs=
 
 after_success:
-  "find $TRAVIS_BUILD_DIR. -type f -exec curl -u $DEPLOY_USERNAME:$DEPLOY_PASSWORD --ftp-create-dirs -T {} ftp://$DEPLOY_HOST$DEPLOY_REMOTEDIR"
+  "find $TRAVIS_BUILD_DIR/dist/. -type f -exec curl -u $DEPLOY_USERNAME:$DEPLOY_PASSWORD --ftp-create-dirs -T {} ftp://$DEPLOY_HOST/$DEPLOY_REMOTEDIR"
