@@ -16,4 +16,4 @@ env:
   - secure: gHkjfV0xQjeUSdFU7Z+h0VIG/KRixLw218bGwinVLdWjAYnkLUV8xWaI/NZ/VkRf/qsN7Z6MU8w70utiY6xu+eiXPzgM/ZBcq867sMS20dfyBZNr1BCQ1qDWmCla5+D8oWmwLHm6ga9WHmuVzEYY/sJzdrRKin4n8uAMqrSSt8k=
   - secure: GZLTRtGGNrypoXgoAd59hVc3dFnsnoOu3RoOwSjeP2J7DK/wXrNYc64nM7LnmudnPA8yXTv4YZVmlqdcoNk3YaxGTS5ilQ7r4vrLk54q/SbhVVTJqJauSR0JRemjDKNhPjutB4QxxYgscbZ2INEtk1+tJRHUJfOeyEKlPBCZV/U=
 
-after_success: find $TRAVIS_BUILD_DIR/dist/. -type f -exec curl -u $DEPLOY_USERNAME:$DEPLOY_PASSWORD --ftp-create-dirs -T {} ftp://$DEPLOY_HOST/$DEPLOY_REMOTEDIR \;
+after_success: find $TRAVIS_BUILD_DIR/dist/. -type f -exec curl -u $DEPLOY_USERNAME:$DEPLOY_PASSWORD --ftp-create-dirs -T {} $DEPLOY_HOST/$DEPLOY_REMOTEDIR \;
