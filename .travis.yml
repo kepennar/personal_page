@@ -9,13 +9,9 @@ before_install:
 install: npm install
 before_script: grunt build
 
-
 env:
   global:
-  - secure: LVTdIisxLOLfk8NRPqlHhm8e2w27RqfxruRtyl/SbMgTlQ0Ak1yrmq/01pSmXMKmaVBWXeADYs/xFcuiQYQUIW7cdl5G7o5cUtrHvqpU5wk8chACOtE4w7NoTYzYzuZijb3FKU/7r/jszy0zVxHtyNLOPCCTXfdBjEl7Lb0ZFrU=
-  - secure: I/ZoPFnD7ZSVPYleE7sJcR5OF9nOh9eCcIMl9YbFRpv37Sp2jR5K/F/+xdb+kgTLQEeLpgXgkXaXGZ+k51m0SJJSHUsxV/PTxjHbHZQgK+8lGLlEq3Rc2J8c2z1okUdIPK9MmRbUmPS9+rt4hmQMILIR+9WrVHVerRukJjDBAh4=
-  - secure: YPKjI0T+8jn8UsxNbN64Go4liUjzvnOgI18DBeyCTWL8xDWoWk+cwvvbxLu5Upd9QdURL7hjwMNPD+O3TxrGQkNpv1QQTjaOJdCLyuuFVEXfDCh5Qky0DCUigl6qPGC5L4EjYuxZ6qHyVx0+IidSIk0eZNSJxNhinByfRIddUfE=
-  - secure: ESzZAwc60NUVNw6IExSAxf05YVsbcbq6T32u1OTllh5TszZlqQPZmrRGvmCrCMIkiggTJPRJXS5HFtWmYGCA6KC1Ee3ayqjSC0BXEI0/ujhjAbk3oBcQmxqnL1wxjV/sTu2+JzVPvU8jeycWXyXqWCfmvHBsKYE3SdA4AbiGino=
+    secure: KkXRvm3nrL9EgCvNXyrP1Iovx23ja5AVTcXGg/hLpRoTUCGDRfJo4lcwLy1cNoYYZNrJQMOwGgKiUDhzq5abAwLSpnyW51TlzCbDl12f8brgtGLtVPD/1zBWRe0IQJsjyxFNZO582v9vP9HkEQqvMD7id18iTwI2EhzDbBjs9Vg=
 
 
 after_success: find $TRAVIS_BUILD_DIR/dist/. -type f -exec curl -u $DEPLOY_USERNAME:$DEPLOY_PASSWORD
