@@ -15,4 +15,4 @@ env:
 
 
 after_success: find $TRAVIS_BUILD_DIR/dist/. -type f -exec curl -u $DEPLOY_USERNAME:$DEPLOY_PASSWORD
-  --ftp-create-dirs -T {} $DEPLOY_HOST/$DEPLOY_REMOTEDIR \;
+  --ftp-create-dirs -T {} $DEPLOY_HOST/$DEPLOY_REMOTEDIR/{} \;
