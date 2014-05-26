@@ -6,6 +6,7 @@ before_install:
 - gem install sass --version "=3.3.7"
 - gem install compass --version "=0.12.3"
 - npm install -g grunt-cli
+- npm install -g bower
 install: npm install
 before_script: 
 - bower install
