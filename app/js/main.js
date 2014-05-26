@@ -19,8 +19,7 @@
 
 	  return ret + "</ul>";
 	});
-
-
+	
 	// TEST
 	if (!Modernizr.touch) {
 		$('#header').on('click', 'a#contact', function() {

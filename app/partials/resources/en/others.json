@@ -3,7 +3,7 @@
 	"part1": {
 		"title": "Technological surveillance",
 		"description": "Technological surveillance on the latest JVM and JavaScript technologies. Evaluation of these technologies with praticing them on personal projects",
-		"link": {"url": "https://github.com/kepennar" , "txt": "Github"}
+		"github": {"user": "kepennar"}
 	},
 	"part2": {
 		"title": "Sport",
