@@ -10,12 +10,12 @@
 # ##############################################################################
 # # Secure access with password                                       #
 # ##############################################################################
-AuthName "Secured"
-AuthType Basic
-AuthUserFile ".htpasswd"
-<Limit GET> 
-Require valid-user 
-</Limit> 
+# AuthName "Secured"
+# AuthType Basic
+# AuthUserFile ".htpasswd"
+# <Limit GET> 
+# Require valid-user 
+# </Limit> 
 
 # ##############################################################################
 # # CROSS-ORIGIN RESOURCE SHARING (CORS)                                       #
