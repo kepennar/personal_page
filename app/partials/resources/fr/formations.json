@@ -2,7 +2,7 @@
     "title"     : "FORMATIONS",
     "formations": [
         {
-            "period"     : "2006 à 2010",
+            "period"     : "2006 à 2011",
             "description": "Obtention du diplôme d'ingénieur de l'École Nationale d'Ingénieurs de Brest avec option informatique.",
             "courses"    : [
                 {"title": "Méthodes de l'ingénierie informatique", "description": "Algorithmique, Paradigmes de programmation, Ingénierie des modèles, Techniques de compilation."},
