@@ -2,7 +2,7 @@
     "title"     : "FORMATIONS",
     "formations": [
         {
-            "period"     : "2006 à 2010",
+            "period"     : "2006 à 2011",
             "description": "Obtaining engineer degree of ENIB with the computer engineering specialization.",
             "courses"    : [
                 {"title": "Computer Engineering Methods", "description": "Algorithmics, Programming paradigms, Model Driven Engineering, Compilation languages and techniques."},
