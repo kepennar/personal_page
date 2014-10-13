@@ -1,8 +1,16 @@
 {
     "title"       : "EXPERIENCES",
     "experiences" : [
+        {
+            "period"        : "Octobre 2014 à actuellement",
+            "entreprise"    : "<strong>Zenika</strong>",
+            "description"   : "TODO",
+            "technologies"  : [
+                    {"content": "TODO"}
+            ]
+        },
     	{
-    		"period"        : "Juin 2011 à actuellement",
+    		"period"        : "Juin 2011 à septembre 2014",
     		"entreprise"    : "<strong>Capgemini</strong> Développeur JEE (Spring).",
     		"description"   : "<p data-highlightids=\"spring, jpa, ws, struts, js, tests, server\" class=\"highlight\">Conception développement et intégration sur plusieurs projets/frameworks (applications de gestion).</p><p data-highlightids=\"gis, server\" class=\"highlight\">Développement SIG (Système d'Information Géographique)</p><p data-highlightids=\"esb, server\" class=\"highlight\">ESB (Entreprise Service Bus)</p>",
     		"technologies"  : [
